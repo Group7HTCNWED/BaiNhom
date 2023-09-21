@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunflower</title>
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/fonts/fontawesome-free-6.4.0-web/css/all.min.css">
     
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/bootstrap-5.0.2-dist/css/bootstrap.min.css">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -32,7 +32,7 @@
         <div class="vector-center">
             <ul class="nav">
                 <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Ưu đãi</a></li>
+                <li><a href="sale.html">Ưu đãi</a></li>
                 <li><a href="#">Phân loại
                         <i class="fa-solid fa-angle-down text-sm"></i>
                     </a>
@@ -80,22 +80,22 @@
         </div>
         <div class="container__main">
 
-            <div class="container__main-item">
+            <div class="container__main-item text-center">
                 <img class="container__main-item-img" src="../assets/img/Hoa Hoè/Tết/hoa_tulip.jpg" alt="">
                 <p class="container__main-name">Hoa Tulip</p>
-                <button class="container__main-btn" type="submit">Mua ngay</button>
+                <div class="btn btn-outline-dark ">Mua ngay</div>
             </div>
 
-            <div class="container__main-item">
+            <div class="container__main-item text-center">
                 <img class="container__main-item-img" src="../assets/img/Hoa Hoè/Cưới/hoa_cẩm_tú_cầu.jpg" alt="">
                 <p class="container__main-name">Cẩm Tú Cầu</p>
-                <button class="container__main-btn" type="submit">Mua ngay</button>
+                <div class="btn btn-outline-dark ">Mua ngay</div>
             </div>
 
-            <div class="container__main-item">
+            <div class="container__main-item text-center">
                 <img class="container__main-item-img" src="../assets/img/Hoa Hoè/Khác/hoa_thiên_điểu.jpg" alt="">
                 <p class="container__main-name">Hoa Thiên Điểu</p>
-                <button class="container__main-btn" type="submit">Mua ngay</button>
+                <div class="btn btn-outline-dark ">Mua ngay</div>
             </div>
         </div>
 
@@ -137,26 +137,62 @@
         </div>
 
         <div class="container__end">
-            <button class="container__end-btn">Xem thêm</button>
+            <div class="btn btn-outline-dark ">Xem thêm</div>
         </div>
 
-        <div class="container__info">
+        <div class="container__info text-center">
             <h3 class="container__info-title">Để lại thông tin nhận thông báo khi có chương trình khuyến mãi</h3>
             <input type="text" class="container__info-name" placeholder="Tên khách hàng"></input> <br>
             <input type="text" class="container__info-phone" placeholder="Số điện thoại"></input> <br>
-            <buton type="submit" class="container__info-btn">Lưu</buton>
+            <div class="btn btn-outline-dark">Lưu</div>
         </div>
 
     </div>
-
-    <div class="footer">
-        <div class="footer__group">
-            <p class="footer__group-title">Nhóm 7 HTCNW</p>
-            <div class="footer__group-name">Ân Hiền Bảo Phúc</div>
-            <div class="footer__group-name">Nguyễn Minh Sang</div>
-            <div class="footer__group-name">Dương Thái Bảo</div>
-            <div class="footer__group-name">Phạm Vũ Khang</div>
+ 
+    <div class="footer d-flex align-items-center flex-column">
+        <div class="footer__icon fs-3 mb-3 ">
+            <a href="" class="text-decoration-none">
+                <i class="fa-brands fa-facebook text-dark"></i>
+            </a>
+            <a href="" class="text-decoration-none">
+                <i class="fa-brands fa-twitter text-dark"></i>
+            </a>
+            <a href="" class="text-decoration-none">
+                <i class="fa-solid fa-envelope text-dark"></i>
+            </a>
+            <a href="" class="text-decoration-none">
+                <i class="fa-brands fa-instagram text-dark"></i>
+            </a>
+            <a href="" class="text-decoration-none">
+                <i class="fa-brands fa-github text-dark"></i>
+            </a>
         </div>
+
+        <section>
+            <form action="">
+                <div class="row">
+                    <div class="col-auto mt-1">
+                        <p>
+                            <strong>Sign up for our newsletter</strong>
+                        </p>
+                    </div>
+                    <div class="col-auto">
+                        <input type="text" class="pb-2">
+                    </div>
+                    <div class="col-auto ">
+                        <div class="btn-outline-light btn text-dark ">Subscribe</div>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <div class="footer__group row">
+            <p class="footer__group-title col-auto">Nhóm 7 HTCNW</p>
+            <div class="footer__group-name col-auto">Ân Hiền Bảo Phúc</div>
+            <div class="footer__group-name col-auto">Nguyễn Minh Sang</div>
+            <div class="footer__group-name col-auto">Dương Thái Bảo</div>
+            <div class="footer__group-name col-auto">Phạm Vũ Khang</div>
+        </div>
+        
     </div>
 </div>
 </body>
