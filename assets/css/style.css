@@ -282,7 +282,7 @@
     border-radius: 3px;
 }
 
-/*Footer*/
+/* /*Footer */
 
 .footer {
     padding: 50px;
@@ -299,7 +299,7 @@
     font-weight: 600;
 }
 
-.container img{
+.container .sale-item img{
     width: 240px;
     height: 250px;
 }
