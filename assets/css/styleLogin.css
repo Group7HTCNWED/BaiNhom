@@ -9,6 +9,7 @@ html {
 }
 
 .container {
+  
   text-align: center;
   background: #2c3338;
   border-radius: 9px;
@@ -115,4 +116,8 @@ a {
   position: relative;
   float: right;
   right: 28px;
+}
+
+body {
+  background: url(../img/pexels-ameruverse-digital-marketing-media-1477166.jpg) top center / cover no-repeat;
 }
