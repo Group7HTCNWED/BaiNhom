@@ -91,6 +91,7 @@
 .nav li:hover .subnav{
     display: block;
 }
+.nav li,    
 .subnav li {
     list-style: none;
     padding: 10px 0px;
@@ -284,8 +285,9 @@
 /*Footer*/
 
 .footer {
-    padding: 16px 0;
+    padding: 50px;
     background-color: #fcbedb;
+    
 }
 
 .footer__group {
@@ -295,4 +297,9 @@
 .footer__group-title {
     font-size: 18px;
     font-weight: 600;
+}
+
+.container img{
+    width: 240px;
+    height: 250px;
 }
