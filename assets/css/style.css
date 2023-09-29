@@ -303,3 +303,20 @@
     width: 240px;
     height: 250px;
 }
+.imgcrop{
+    height: 220px;
+   object-fit: cover;
+}
+.imgwidth{
+    width: 900px;
+    height: 250px;
+}
+.imgwidth2{
+    width: 900px;
+    height: 450px;
+    padding: 0;
+}
+.row{
+    margin-left: 150px;
+    text-align: center;
+}
