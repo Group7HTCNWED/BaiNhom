@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giftcard</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/takeCareFlower.css">
+
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="announcement-bar">
+            <p class="announcement-bar_message text-center">BUY 2 GET 1 FREE, Use Code: 2003</p>
+        </div>
+    </header>
+    <div class="header">
+        <div class="vector-left">
+            <div class="header-logo">
+                <a href="home.html">
+                    <img class="header-logo-img" src="../assets/img/logo.png" alt="avt">
+                </a>
+
+            </div>
+        </div>
+        <div class="vector-center">
+            <ul class="nav">
+                <li><a href="home.html">Trang chủ</a></li>
+                <li><a href="sale.html">Ưu đãi</a></li>
+                <li><a href="#">Phân loại
+                        <i class="fa-solid fa-angle-down text-sm"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="../HTML/Driedflowers.html">Hoa khô</a></li>
+                        <li><a href="../HTML/Falseflowers.html">Hoa giả</a></li>
+                        <li><a href="../HTML/Flowerpot.html">Chậu hoa</a></li>
+                        <li><a href="../HTML/Vases.html">Bình hoa</a></li>
+                        <li><a href="../HTML/Flowerbaskets.html">Giỏ hoa</a></li>
+                    </ul>
+                </li>
+                <li><a href="takecareFlower.html">Hướng dẫn</a></li>
+                <li class=""><a href="#">Quà tặng</a></li>
+            </ul>
+        </div>
+        <div class="vector-right">
+            <div class="header-search px-2">
+                <i class="fa-solid fa-magnifying-glass text-dark fs-5">
+                    <input type="text" placeholder="Tìm kiếm ở đây" class="header-search-input">
+                </i>
+            </div>
+            <div class="header-user px-2">
+                <a href="login.html" class="text-dark fs-9 text-dn">
+                    <i class="fa-solid fa-user mx-2 fs-5"></i>
+                    Cá nhân</a>
+            </div>
+            <div class="header-cart px-2">
+                <a href="#"><i class="fa-solid fa-cart-shopping" style="color: black"></i></a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="section-header d-flex m-4 flex-column align-items-center justify-content-center">
+        <h1>
+            E-GIFT VOUCHER
+        </h1>
+        <p class="header-decryption">Nếu bạn không biết nên mua gì cho người thân của mình, hãy tặng họ một phiếu quà
+            tặng từ Sunflower. Phiếu quà
+            tặng này sẽ được gửi trực tiếp đến hộp thư điện tử của họ, cho phép họ tự do lựa chọn món quà mình mong
+            muốn. Đây là cách tặng quà hoàn hảo cho tất cả mọi người.</p>
+        <ol class="list-group list-group-numbered">
+            <li class="list-group-item  ">Lựa chọn một mệnh giá từ 200.000₫ đến 2.000.000₫ theo ý muốn</li>
+            <li class="list-group-item">Gửi lời nhắn cá nhân độc đáo của bạn</li>
+            <li class="list-group-item">Chọn ngày giao phiếu quà tặng điện tử</li>
+            <li class="list-group-item">Người thân yêu của bạn sẽ tự tay chọn những bó hoa mà họ ưa thích.</li>
+        </ol>
+    </div>
+    <hr>
+
+
+    <div class="content container m-auto my-lg-5 ">
+        <div class="row">
+            <div class="col-auto">
+
+                <img src="../assets/img/White Beige Black Modern Simple Minimalist Instagram Post Mockup Letter Be Thankful.png"
+                    alt="" style="width: 480px;height: 480px;">
+            </div>
+            <div class="col-lg-5">
+
+                <form action="giftVoucher" class=" text-start p-2" style="border: 1px solid #000;">
+                    <table >
+                        <tr>
+                            <td><label for="validationCustom01" class="form-label my-2">AMOUNT <span>*</span></label></td>
+                        </tr>
+                        <tr>
+                            <td ><select name="selectionPrice" id="selectionPrice" class="form-select" style="padding-right: 300px;">
+                                    <option value="" selected>Chose an Amount</option>
+                                    <option value="">200.000₫</option>
+                                    <option value="">500.000₫</option>
+                                    <option value="">800.000₫</option>
+                                    <option value="">1.000.000₫</option>
+                                    <option value="">1.200.000₫</option>
+                                    <option value="">1.500.000₫</option>
+                                    <option value="">1.800.000₫</option>
+                                    <option value="">2.000.000₫</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td><label for="nameInput" class="form-label my-2">Tên người nhận<span>*</span></label></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" name="name" class="form-control px-xl-5" id="nameInput" >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="emailInput" class="form-label my-2" >Email người nhận<span>*</span></label></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="email" name="email" class="form-control" id="emailInput">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="" class="form-label my-2">Tin nhắn</label></td>
+                        </tr>
+                        <tr>
+                            <td><div class="form-floating">
+                                <textarea name="floatingTextarea2"  cols="30" rows="5" class="form-control" style="height: 200px;" id="floatingTextarea2"> </textarea>
+                                <label for="floatingTextarea2"> Gửi tin nhắn ở đây</label>
+                              </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="entry_date" class="form-label">Ngày gửi email</label></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                
+                                <input type="date" name='entry_date' class="form-control mb-3" id="entry_date" value="2012-12-12">
+                            </td>
+                        </tr>
+                        
+                            
+                        
+                    </table>  
+                    <div class="btn-giftCard text-center my-3">
+                        <button type="submit" class="btn btn-outline-dark " >Thêm vào giỏ hàng</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<hr>
+
+
+
+    <div class="footer d-flex align-items-center flex-column">
+        <div class="footer__icon mb-4 fs-4">
+            <a href="" class="text-decoration-none">
+                <i class="fa-brands fa-facebook text-dark "></i>
+            </a>
+            <a href="" class="text-decoration-none">
+                <i class="fa-brands fa-twitter text-dark"></i>
+            </a>
+            <a href="" class="text-decoration-none">
+                <i class="fa-solid fa-envelope text-dark"></i>
+            </a>
+            <a href="" class="text-decoration-none">
+                <i class="fa-brands fa-instagram text-dark"></i>
+            </a>
+            <a href="" class="text-decoration-none">
+                <i class="fa-brands fa-github text-dark"></i>
+            </a>
+        </div>
+
+        <section>
+            <form action="">
+                <div class="row">
+                    <div class="col-auto mt-1">
+                        <p>
+                            <strong>Sign up for our newsletter</strong>
+                        </p>
+                    </div>
+                    <div class="col-auto">
+                        <input type="text" class="pb-2">
+                    </div>
+                    <div class="col-auto ">
+                        <div class="btn-outline-light btn text-dark ">Subscribe</div>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <div class="footer__group row mt-4">
+            <p class="footer__group-title col-auto">Nhóm 7 HTCNW</p>
+            <div class="footer__group-name col-auto">Ân Hiền Bảo Phúc</div>
+            <div class="footer__group-name col-auto">Nguyễn Minh Sang</div>
+            <div class="footer__group-name col-auto">Dương Thái Bảo</div>
+            <div class="footer__group-name col-auto">Phạm Vũ Khang</div>
+        </div>
+
+    </div>
+</body>
+
+</html>

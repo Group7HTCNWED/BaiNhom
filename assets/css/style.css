@@ -320,3 +320,15 @@
     margin-left: 150px;
     text-align: center;
 }
+
+
+
+/* Gift voucher */
+.section-header{
+    background: url(../img/egift-voucher-apple.jpg) top center / cover no-repeat;
+    min-height: 400px;
+}
+.header-decryption{
+    max-width: 600px;
+    
+}
