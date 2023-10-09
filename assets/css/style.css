@@ -146,7 +146,7 @@
 }
 
 .container__main-separator, .container__promotion-separator {
-    height: 1px;
+    height: 2px;
     width: 480px;
     margin-top: 18px;
     background-color: #888888;
@@ -154,7 +154,7 @@
 
 .container__main-title-text, .container__promotion-title-text {
     font-size: 24px;
-    color: rgba(0, 0, 0, 0.8);
+    color:#000;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
     font-weight: 550;
@@ -303,6 +303,7 @@
     width: 240px;
     height: 250px;
 }
+/*hoa khô*/
 .imgcrop{
     height: 220px;
    object-fit: cover;
@@ -319,4 +320,22 @@
 .row{
     margin-left: 150px;
     text-align: center;
+    padding: 20px;
 }
+.imgcrop3{
+    height: 400px;
+    width: 800px;
+}
+.orderby{
+    margin-left: 980px;
+    width: 250px;
+}
+.text{
+        width: 60%; /* Đặt chiều rộng của khung container */
+        margin: auto; 
+        padding: 25px;       
+}
+ol li {
+    color:#000; /* Màu sắc của văn bản trong danh sách li */
+    font-weight: bolder; /* Đặt độ đậm cho văn bản */
+  }
