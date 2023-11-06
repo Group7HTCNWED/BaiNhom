@@ -103,9 +103,7 @@
     z-index: 100;
     background-color:#fff;
 }
-.slider{
-    /* opacity: 0.8; */
-}
+
 
 .carousel-indicators{
     color: #000;
@@ -146,7 +144,7 @@
 }
 
 .container__main-separator, .container__promotion-separator {
-    height: 1px;
+    height: 2px;
     width: 480px;
     margin-top: 18px;
     background-color: #888888;
@@ -154,7 +152,7 @@
 
 .container__main-title-text, .container__promotion-title-text {
     font-size: 24px;
-    color: rgba(0, 0, 0, 0.8);
+    color:#000;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
     font-weight: 550;
@@ -186,7 +184,7 @@
     font-style: italic;
 }
 
-.container__main-btn {
+/* .container__main-btn {
     border: 1px solid rgba(0, 0, 0, 0.5);
     margin: 16px 0;
     font-size: 18px;
@@ -197,7 +195,7 @@
     position: absolute;
     left: 150px;
     top: 280px;
-}
+} */
 
 /*Khuyến mãi*/
 
@@ -237,10 +235,12 @@
 
 .container__end-btn {
     text-align: center;
-    padding: 4px 12px;
+    padding: 12px 12px;
     border-radius: 24px;
     border: 1px solid rgba(0, 0, 0, 0.5);
     width: 100%;
+    background-color: #fcbedb;
+    margin-top: 12px;
 }
 
 
@@ -303,6 +303,7 @@
     width: 240px;
     height: 250px;
 }
+/*hoa khô*/
 .imgcrop{
     height: 220px;
    object-fit: cover;
@@ -330,5 +331,17 @@
 }
 .header-decryption{
     max-width: 600px;
-    
+    padding: 20px;
+} 
+
+.footer li {
+    background-color: #fcbedb;
+}
+
+.footer .row  i  {
+    font-size: 10px;
+}
+
+.container__info{
+     border: 1px solid #ccc;
 }
