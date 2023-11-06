@@ -5,16 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunflower</title>
-
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/fonts/fontawesome-free-6.4.0-web/css/all.min.css">
-    
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script src="../assets/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <!-- Add the Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+
+
+    <!-- Add the Bootstrap JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        crossorigin="anonymous"></script>
+    <script src="../assets/bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
@@ -29,7 +31,7 @@
                 <a href="home.html">
                     <img class="header-logo-img" src="../assets/img/logo.png" alt="avt">
                 </a>
-                
+
             </div>
         </div>
         <div class="vector-center">
@@ -41,10 +43,9 @@
                     </a>
                     <ul class="subnav">
                         <li><a href="../HTML/Driedflowers.html">Hoa khô</a></li>
-                        <li><a href="../HTML/Falseflowers.html">Hoa giả</a></li>
-                        <li><a href="../HTML/Flowerpot.html">Chậu hoa</a></li>
+                        <li><a href="../HTML/weddingflowers.html">Hoa Cưới</a></li>
                         <li><a href="../HTML/Vases.html">Bình hoa</a></li>
-                        <li><a href="../HTML/Flowerbaskets.html">Giỏ hoa</a></li>
+                        <li><a href="../HTML/lunarflower.html">Hoa Tết</a></li>
                     </ul>
                 </li>
                 <li><a href="takecareFlower.html">Hướng dẫn</a></li>
@@ -58,7 +59,7 @@
                 </i>
             </div>
             <div class="header-user px-2">
-                <a href="login.html" class="text-dark fs-9 text-dn">
+                <a href="login.html" class="text-dark  fs-9 text-dn">
                     <i class="fa-solid fa-user mx-2 fs-5"></i>
                     Cá nhân</a>
             </div>
@@ -68,12 +69,35 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="container__best">
-            <i class="fa-solid fa-chevron-left"></i>
-            <img class="container__best-img" src="../assets/img/Hoa Hoè/best.jpg" alt="Nổi bật">
-            <i class="fa-solid fa-chevron-right"></i>
+    <div class="slider my-4">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner w-100">
+                <div class="carousel-item active">
+                    <img class="d-block w-100"
+                        src="../assets/img/slider/pexels-ameruverse-digital-marketing-media-1477166.jpg">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../assets/img/slider/pexels-irina-iriser-1408221.jpg"
+                        alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../assets/img/slider/pexels-irina-iriser-1414042.jpg"
+                        alt="Third slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev fs-2" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleSlidesOnly" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
+    </div>
+
+    <div class="container">
+
 
         <div class="container__main-title">
             <div class="container__main-separator"></div>
@@ -85,25 +109,68 @@
             <div class="container__main-item text-center">
                 <img class="container__main-item-img" src="../assets/img/Hoa Hoè/Tết/hoa_tulip.jpg" alt="">
                 <p class="container__main-name">Hoa Tulip</p>
-                <!-- <button class="container__main-btn" type="submit">Mua ngay</button> -->
-            <div class="btn btn-outline-dark ">Mua ngay</div>
+                
+                <p ><strike>950,000₫</strike> 820,000₫</p>
+                
+                <button class="btn btn-outline-dark" type="submit">Mua ngay</button>
+
+                
 
             </div>
 
-            <div class="container__main-item text-center" >
-                <img class="container__main-item-img" src="../assets/img/Hoa Hoè/Cưới/hoa_cẩm_tú_cầu.jpg" alt="">
+            <div class="container__main-item text-center">
+                <img class="container__main-item-img" src="../assets/img/Hoa Hoè/Sinh Nhật/hoa_cẩm_tú_cầu.jpg" alt="">
                 <p class="container__main-name">Cẩm Tú Cầu</p>
-                <!-- <button class="container__main-btn" type="submit">Mua ngay</button> -->
-            <div class="btn btn-outline-dark ">Mua ngay</div>
+                
+                <p ><strike>7,150,000₫</strike> 580,000₫</p>
+                
+                <button class="btn btn-outline-dark" type="submit">Mua ngay</button>
 
             </div>
 
             <div class="container__main-item text-center">
                 <img class="container__main-item-img" src="../assets/img/Hoa Hoè/Khác/hoa_thiên_điểu.jpg" alt="">
                 <p class="container__main-name">Hoa Thiên Điểu</p>
-                <div class="btn btn-outline-dark ">Mua ngay</div>
+                <p ><strike>750,000₫</strike> 689,000₫</p>
+                
+                <button class="btn btn-outline-dark" type="submit">Mua ngay</button>
 
             </div>
+            
+            
+        </div>
+        <div class="container__main">
+
+            <div class="container__main-item text-center">
+                <img class="container__main-item-img" src="../assets/img/Hoa Hoè/Tết/hoa_vạn_thọ.jpg" alt="">
+                <p class="container__main-name">Hoa Vạn Thọ</p>
+                <p ><strike>350,000₫</strike> 240,000₫</p>
+                
+                <button class="btn btn-outline-dark" type="submit">Mua ngay</button>
+                
+
+            </div>
+
+            <div class="container__main-item text-center">
+                <img class="container__main-item-img" src="../assets/img/Hoa Hoè/Sinh Nhật/hoa_lay_ơn.jpg" alt="">
+                <p class="container__main-name">Cẩm Lay Ơn</p>
+                <p ><strike>220,000₫</strike> 140,000₫</p>
+                
+                <button class="btn btn-outline-dark" type="submit">Mua ngay</button>
+                
+
+            </div>
+
+            <div class="container__main-item text-center">
+                <img class="container__main-item-img" src="../assets/img/Hoa Hoè/Khác/hoa_cúc_mẫu_đơn.jpg" alt="">
+                <p class="container__main-name">Hoa Cúc Mẫu Đơn</p>
+                <p ><strike>320,000₫</strike> 280,000₫</p>
+                
+                <button class="btn btn-outline-dark" type="submit">Mua ngay</button>
+
+            </div>
+            
+            
         </div>
 
         <div class="container__promotion-title">
@@ -112,53 +179,63 @@
             <div class="container__promotion-separator"></div>
         </div>
         <div class="container__promotion">
-            <div class="container__promotion-item">
-                <img src="../assets/img/Hoa Hoè/Sinh Nhật/hoa_cẩm_chướng.jpg" alt="cẩm chướng" class="container__promotion-item-img">
+            <div class="container__promotion-item text-center">
+                <img src="../assets/img/Hoa Hoè/Sinh Nhật/hoa_cẩm_chướng.jpg" alt="cẩm chướng"
+                    class="container__promotion-item-img">
                 <p class="container__promotion-name">Hoa Cẩm Chướng</p>
                 <p class="container__promotion-price">1.750.000</p>
+                <button class="btn btn-outline-dark" type="submit">Mua ngay</button>
             </div>
 
-            <div class="container__promotion-item">
-                <img src="../assets/img/Hoa Hoè/Cưới/hoa_hồng.jpg" alt="hoa hồng" class="container__promotion-item-img">
+            <div class="container__promotion-item text-center">
+                <img src="../assets/img/Hoa Hoè/Sinh Nhật/hoa_hồng.jpg" alt="hoa hồng"
+                    class="container__promotion-item-img">
                 <p class="container__promotion-name">Hoa Hồng</p>
                 <p class="container__promotion-price">1.250.000</p>
+                <button class="btn btn-outline-dark" type="submit">Mua ngay</button>
             </div>
 
-            <div class="container__promotion-item">
-                <img src="../assets/img/Hoa Hoè/Tết/hoa_hải_đường.jpg" alt="hải đường" class="container__promotion-item-img">
+            <div class="container__promotion-item text-center">
+                <img src="../assets/img/Hoa Hoè/Tết/hoa_hải_đường.jpg" alt="hải đường"
+                    class="container__promotion-item-img">
                 <p class="container__promotion-name">Hoa Hải Đường</p>
                 <p class="container__promotion-price">1.005.000</p>
+                <button class="btn btn-outline-dark" type="submit">Mua ngay</button>
             </div>
 
-            <div class="container__promotion-item">
-                <img src="../assets/img/Hoa Hoè/Sinh Nhật/hoa_thạch_thảo.jpg" alt="thạch thảo" class="container__promotion-item-img">
+            <div class="container__promotion-item text-center">
+                <img src="../assets/img/Hoa Hoè/Sinh Nhật/hoa_thạch_thảo.jpg" alt="thạch thảo"
+                    class="container__promotion-item-img">
                 <p class="container__promotion-name">Hoa Thạch Thảo</p>
                 <p class="container__promotion-price">1.600.000</p>
+                <button class="btn btn-outline-dark" type="submit">Mua ngay</button>
             </div>
 
-            <div class="container__promotion-item">
-                <img src="../assets/img/Hoa Hoè/Khác/hoa_tràm_Đài_Loan.jpg" alt="tràm dl" class="container__promotion-item-img">
+            <div class="container__promotion-item text-center">
+                <img src="../assets/img/Hoa Hoè/Khác/hoa_tràm_Đài_Loan.jpg" alt="tràm dl"
+                    class="container__promotion-item-img ">
                 <p class="container__promotion-name">Hoa Tràm Đài Loan</p>
                 <p class="container__promotion-price">2.900.000</p>
+                <button class="btn btn-outline-dark " type="submit">Mua ngay</button>
             </div>
         </div>
 
-        <div class="container__end">
-            <div class="btn btn-outline-dark ">Xem thêm</div>
-            <!-- <button class="container__end-btn">Xem thêm</button> -->
+        <div class="container__end mt-4">
+
+            <button class="container__end-btn ">Xem thêm</button>
         </div>
 
-        <div class="container__info text-center">
+        <div class="container__info text-center" >
             <h3 class="container__info-title">Để lại thông tin nhận thông báo khi có chương trình khuyến mãi</h3>
             <input type="text" class="container__info-name" placeholder="Tên khách hàng"></input> <br>
             <input type="text" class="container__info-phone" placeholder="Số điện thoại"></input> <br>
-            <div class="btn btn-outline-dark px-4">Lưu</div>
-            <!-- <buton type="submit" class="container__info-btn">Lưu</buton> -->
+            
+            <buton type="submit" class="container__info-btn">Lưu</buton>
         </div>
 
     </div>
 
-    <div class="footer d-flex align-items-center flex-column">
+    <div class="footer d-flex align-items-center flex-column" >
         <div class="footer__icon mb-4 fs-4">
             <a href="" class="text-decoration-none">
                 <i class="fa-brands fa-facebook text-dark "></i>
@@ -194,16 +271,52 @@
                 </div>
             </form>
         </section>
-        <div class="footer__group row mt-4">
-            <p class="footer__group-title col-auto">Nhóm 7 HTCNW</p>
-            <div class="footer__group-name col-auto">Ân Hiền Bảo Phúc</div>
-            <div class="footer__group-name col-auto">Nguyễn Minh Sang</div>
-            <div class="footer__group-name col-auto">Dương Thái Bảo</div>
-            <div class="footer__group-name col-auto">Phạm Vũ Khang</div>
+       
+        <div class="row justify-content-between mt-4" >
+            <div class="col-auto ">
+                <a href="home.html " class="navbar-brand">
+                    <img class="header-logo-img" src="../assets/img/logo.png" alt="avt">
+                    <h4 class="d-inline-block fw-semibold fs-3">
+                        Sunflower
+                        
+                    </h4>
+                </a>
+                
+            </div>
+
+           
+            <div class="col-auto " >
+                <h4 class="fw-bold">Links</h4>
+                <ul class="list-unstyled list-group">
+                    <li class="list-group-item list-group-item-mine "><a href="index.html"></a><i
+                            class="fa-solid fa-chevron-right"></i></span> Trang chủ</li>
+                    <li class="list-group-item list-group-item-mine "><a href="sale.html"></a><i
+                            class="fa-solid fa-chevron-right"></i></span> Ưu đãi</li>
+                    <li class="list-group-item list-group-item-mine "><a href="Driedflowers.html"></a><i
+                            class="fa-solid fa-chevron-right"></i></span> Phân loại</li>
+                    <li class="list-group-item list-group-item-mine "><a href="takecareFlower.html"></a><i
+                            class="fa-solid fa-chevron-right"></i></span> Hướng dẫn</li>
+                    <li class="list-group-item list-group-item-mine "><a href="giftcard.html"></a><i
+                            class="fa-solid fa-chevron-right"></i></span> Quà tặng</li>
+                </ul>
+            </div>
+            <div class="col-auto" >
+                <h4 class="fw-bold">Nhóm 7 HTCNW</h4>
+                <ul class="list-unstyled list-group">
+                    <li class="list-group-item list-group-item-mine  ">Ân Hiền Bảo Phúc</li>
+                    <li class="list-group-item list-group-item-mine ">Nguyễn Minh Sang</li>
+                    <li class="list-group-item list-group-item-mine ">Dương Thái Bảo</li>
+                    <li class="list-group-item list-group-item-mine  ">Phạm Vũ Khang</li>
+
+                </ul>
+            </div>
+
         </div>
 
     </div>
-</div>
+
+
+
 </body>
 
 </html>
