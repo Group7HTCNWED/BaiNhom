@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SunFlower - Shop Hoa Trực Tuyến | Hoa Khô</title>
+
+    <link rel="icon" type="image/x-icon" href="../ASSETS/img/SideBarIcon.png">
+
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/bootstrap.css">
+
+    <link rel="stylesheet" href="../CSS/styleDried.css">
+
+    <link rel="stylesheet" href="../ASSETS/fonts/fontawesome-free-6.4.0-web/css/all.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+
+    <script src="../JS/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="sale-bar">
+            <p class="sale_message text-center">MUA 2 TẶNG 1 KHI NHẬP MÃ: 2003 <i class="fa-solid fa-ticket"></i></p>
+        </div>
+    </header>
+    <div class="header">
+        <div class="vector-left">
+            <h3 class="header-title">SUNFLOWER</h3>
+        </div>
+        <div class="vector-center">
+            <ul class="nav">
+                <li class="sl">
+                    <select>
+                        <option value="Khu vực">Khu vực</option>
+                        <option value="TPHCM">TPHCM</option>
+                        <option value="Cần Thơ">Cần Thơ</option>
+                        <option value="Đà Nẵng">Đà Nẵng</option>
+                        <option value="Hải Phòng">Hải Phòng</option>
+                        <option value="Biên Hoà">Biên Hoà</option>
+                        <option value="Hà Nội">Hà Nội</option>
+                        <option value="Tỉnh khác">Tỉnh khác</option>
+                    </select>
+                </li>
+                <li><a class="strong" href="home.html">Trang chủ</a></li>
+                <li><a href="#">Phân loại
+                        <i class="fa-solid fa-angle-down text-sm"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="Driedflower.html">Hoa khô</a></li>
+                        <li><a href="Falseflower.html">Hoa giả</a></li>
+                        <li><a href="Flowerpot.html">Chậu hoa</a></li>
+                        <li><a href="Vases.html">Bình hoa</a></li>
+                        <li><a href="Flowerbasket.html">Giỏ hoa</a></li>
+                    </ul>
+                </li>
+                <li><a class="strong" href="sale.html">Ưu đãi</a></li>
+                <li><a class="strong" href="giftcard.html">Quà tặng</a></li>
+                <li><a class="strong" href="takecareFlower.html">Hướng dẫn</a></li>
+            </ul>
+        </div>
+        <div class="vector-right">
+            <div class="header-search">
+                <input type="text" placeholder="Tìm kiếm ở đây" class="header-search-input">
+                <div class="header-search-icon">
+                    <a href="#">
+                        <i class="fa-solid fa-magnifying-glass text-dark"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="header-cart">
+                <a href="#">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p class="number-cart">0</p>
+                </a>
+            </div>
+            <div class="header-user">
+                <a href="#" id="loginBtn" onclick="openModal()">
+                    <i class="fa-solid fa-user" id="user"></i>
+                </a>
+                <div class="modal" id="myModal">
+                    <form name="form" class="box" method="post">
+                        <h4>Đăng nhập</h4>
+                        
+                        <div class="input-email">
+                            <i class="fa-regular fa-envelope"></i>
+                            <input id="email" class="input-email-btn" type="email" name="email" placeholder="Email"/>
+                        </div>
+                        
+                        <div class="input-pass">
+                            <i class="fa-solid fa-lock"></i>
+                            <input id="pass" class="input-pass-btn" type="password" name="password" placeholder="Mật khẩu"/>
+                        </div>
+                    
+                        <a href="#" class="forgetpass">Quên mật khẩu?</a>
+                
+                        <div class="btn-control">
+                            <input type="button" onclick="closeModal()" class="cancel" id="cancel" value="QUAY LẠI"></input>
+                            <input type="button" onclick="closeModal()" class="submit" id="submit" value="ĐĂNG NHẬP"></input>
+                        </div>
+
+                        <div class="login-or">
+                            <div class="login-separator"></div>
+                            <h2 class="login-text">HOẶC</h2>
+                            <div class="login-separator"></div>
+                        </div>
+
+                        <div class="btn-link-control">
+                            <a href="#" class="btn-fb">
+                                <i class="fa-brands fa-facebook"></i>
+                                <p>Facebook</p>
+                            </a>
+
+                            <a href="#" class="btn-gg">
+                                <i class="fa-brands fa-google"></i>
+                                <p>Google</p>
+                            </a>
+                        </div>
+
+                        <p class="login-text-extra">Bạn chưa có tài khoản? <a href="#">Đăng ký.</a></p>
+
+                        <p id="resultModal"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content">
+        <div class="content-title">
+            <h2 class="content-title-text">Hoa Khô Trang Trí </h2>
+            <hr>
+        </div>
+        
+        <div class="main">
+            <div class="left">
+                <div class="orderby-main">
+                    <h4 class="orderby-title"><i class="fa-solid fa-sort"></i> Sắp xếp theo:</h4>
+                    <ul class="orderby">
+                        <li>
+                            <a href="#">Bán chạy</a>
+                        </li>
+                        <li>
+                            <a href="#">Mới nhất</a>
+                        </li>
+                        <li>
+                            <a href="#">Giá thấp đến cao</a>
+                        </li>
+                        <li>
+                            <a href="#">Giá cao đến thấp</a>
+                        </li>
+                    </ul>
+                </div>
+        
+                <div class="filter-main">
+                    <h4 class="filter-title"><i class="fa-solid fa-filter"></i> Lọc nhanh:</h4>
+                    <div class="filter">
+                        <h5>Giá: <span id="resultPrice">650000 VND</span></h5>
+                        <input type="range" name="price" class="price" min="50000" max="750000" step="10" oninput="printPrice(this)">
+
+                        <h5>Điểm đánh giá:</h5>
+                        <div class="input-rate">
+                            <input type="checkbox" name="rate" id="1s">
+                            <label for="1s">⭐</label>
+                        </div>
+                        <div class="input-rate">
+                            <input type="checkbox" name="rate" id="2s">
+                            <label for="2s">⭐⭐</label> 
+                        </div>
+                        <div class="input-rate">
+                            <input type="checkbox" name="rate" id="3s">
+                            <label for="3s">⭐⭐⭐</label>
+                        </div>
+                        <div class="input-rate">
+                            <input type="checkbox" name="rate" id="4s">
+                            <label for="4s">⭐⭐⭐⭐</label>
+                        </div>
+                        <div class="input-rate">
+                            <input type="checkbox" name="rate" id="5s">
+                            <label for="5s">⭐⭐⭐⭐⭐</label>
+                        </div>
+
+                        <h5>Kích thước:</h5>
+                        <input type="checkbox" name="" id="f1">
+                        <label id="lf1" for="f1">Bó lớn</label> <br>
+                        <input type="checkbox" name="" id="f2">
+                        <label id="lf2" for="f2">Bó nhỏ</label>
+
+                        <h5>Khuyến mãi:</h5>
+                        <input type="radio" name="sale" id="sale1">
+                        <label id="lf1" for="sale1">Có</label>
+                        <input type="radio" name="sale" id="sale2">
+                        <label id="lf2" for="sale2">Không</label>
+                    </div>
+
+                    <input type="button" class="btn btn-danger" value="Áp dụng">
+                </div>
+            </div>
+    
+            <div class="right">
+                <div class="row">
+                    <div class="col">
+                        <div class="thumbnail">
+                            <img src="../ASSETS/img/Driedflower/h1.jpg" alt="" class="imgcrop">
+                            <div class="card-body">
+                                <h3>Hoa Lavender khô</h3>
+                                <p>120.000₫/100g</p>
+                                <input type="button" class="btn btn-outline-danger" value="Mua ngay"></input>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="thumbnail">
+                            <img src="../ASSETS/img/Driedflower/h2.jpg" alt="" class="imgcrop">
+                            <div class="card-body">
+                                <h3>Hoa hồng khô</h3>
+                                <p>150.000₫/100g</p>
+                                <input type="button" class="btn btn-outline-danger" value="Mua ngay"></input>
+                            </div>
+                        </div>
+                        <br><br>
+                    </div>
+                    <div class="col">
+                        <div class="thumbnail">
+                            <img src="../ASSETS/img/Driedflower/h3.jpg" alt="" class="imgcrop">
+                            <div class="card-body">
+                                <h3>Hoa sen khô</h3>
+                                <p>95.000₫/100g</p>
+                                <input type="button" class="btn btn-outline-danger" value="Mua ngay"></input>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="thumbnail">
+                            <img src="../ASSETS/img/Driedflower/h4.jpg" alt="" class="imgcrop">
+                            <div class="card-body">
+                                <h3>Hoa cúc glixia khô</h3>
+                                <p>160.000₫/100g</p>
+                                <input type="button" class="btn btn-outline-danger" value="Mua ngay"></input>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="thumbnail">
+                            <img src="../ASSETS/img/Driedflower/h5.jpg" alt="" class="imgcrop">
+                            <div class="card-body">
+                                <h3>Hoa baby khô</h6>
+                                <p>135.000₫/100g</p>
+                                <input type="button" class="btn btn-outline-danger" value="Mua ngay"></input>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="thumbnail">
+                            <img src="../ASSETS/img/Driedflower/h6.jpg" alt="" class="imgcrop">
+                            <div class="card-body">
+                                <h3>Hoa bông gòn khô</h3>
+                                <p>50.000₫/100g</p>
+                                <input type="button" class="btn btn-outline-danger" value="Mua ngay"></input>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="thumbnail">
+                            <img src="../ASSETS/img/Driedflower/h7.jpg" alt="" class="imgcrop">
+                            <div class="card-body">
+                                <h3>Hoa lúa mạch khô</h3>
+                                <p>70.000₫/100g</p>
+                                <input type="button" class="btn btn-outline-danger" value="Mua ngay"></input>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="thumbnail">
+                            <img src="../ASSETS/img/Driedflower/h8.jpg" alt="" class="imgcrop">
+                            <div class="card-body">
+                                <h3>Hoa cúc nút áo khô</h3>
+                                <p>85.000₫/100g</p>
+                                <input type="button" class="btn btn-outline-danger" value="Mua ngay"></input>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination-sale">
+                    <div aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item">
+                                <a class="page-link text-dark" href="#">Trang đầu</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link text-dark" href="#">1</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link text-dark" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link text-dark" href="#">3</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link text-dark" href="#">Trang cuối</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <hr/>
+                <div class="container">
+                    <div class="section-1">
+                        <h3>Hoa khô trang trí là gì?</h3>
+                        <img src="../ASSETS/img/Hoa khô/download.jpg" alt="">
+                        <p class="p-1">Hoa khô dùng trang trí là sự kết hợp giữa vẻ đẹp tự nhiên của hoa và tính bền vững của hoa khô. Hoa khô tdùng trong trang trí là loại hoa đã được xử lý để khô hoàn toàn, giữ lại hình dáng, màu sắc
+                            và độ bền của chúng. Quá trình làm khô hoa nhằm loại bỏ nước từ bông hoa, nhưng vẫn giữ được hình dáng và đặc điểm tự
+                            nhiên của hoa. Hoa sấy khô trang trí được sử dụng để trang trí không gian nội thất, sự kiện, và các dự án trang trí
+                            khác. Với khả năng tồn tại lâu dài và không cần chăm sóc đặc biệt, hoa khô mang đến vẻ đẹp tự nhiên và
+                            tinh tế cho không gian trang trí.</p>
+                    </div>
+                    
+                    <div class="section-2">
+                        <h3>Nói về những chậu hoa</h3>
+                        <img src="../ASSETS/img/Hoa khô/Bình hoa khô serena.jpg" alt="">
+                        <p>Bình hoa khô trang trí phòng khách tạo điểm nhấn tinh tế và độc đáo cho không gian sống. Bình hoa khô thường được thiết kế với sự kết hợp của các loại hoa khô và các phụ kiện trang trí
+                            khác. Bình hoa khô trang trí phòng khách có nhiều kiểu dáng và thiết kế khác nhau, từ những bình đơn giản
+                            đến những chậu hoa phức tạp. Bạn có thể lựa chọn bình hoa khô phù hợp với phong cách trang trí và màu sắc tổng thể của phòng
+                            khách. Sản phẩm này có thể bao gồm một hoặc nhiều loại hoa khô, kết hợp với các loại cây khô, cỏ khô, hoặc
+                            các phụ kiện trang trí khác như dây ruy băng, nơ, hoặc lá khô. Những bình hoa khô mang đến một cái nhìn đẹp mắt, mà còn có lợi ích về độ bền và dễ bảo quản.
+                            Bạn không cần phải lo lắng về việc thay nước hoặc chăm sóc như khi sử dụng hoa tươi. Chúng cũng không gây dị ứng hoa hay tạo ra mùi hương mạnh, tạo điều kiện thuận lợi cho những người
+                            nhạy cảm với mùi hương hoa.</p>
+                    </div>
+                    
+                    <div class="section-3">
+                        <h3>Một số lưu ý và câu hỏi thường gặp về hoa khô</h3>
+                        <ul>
+                            <li>Thời gian trang trí và tồn tại của hoa khô?</li>
+                            <p class="p1">Thời gian tồn tại của hoa khô trang trí phụ thuộc vào cách bảo quản và điều kiện môi trường. Với điều kiện lý tưởng, hoa khô có thể tồn tại từ vài tháng đến một năm. Hoa khô cần phải được 
+                                bảo quản như thế nào để giữ được độ tươi và đẹp? Để giữ hoa khô trang trí trong tình trạng tốt nhất, hãy đặt chúng ở nơi thoáng khí, tránh ánh nắng mặt trời trực tiếp và độ ẩm cao. Tránh 
+                                tiếp xúc với nước và những vật liệu gây ẩm
+                            </p>
+                            <img style="width: 300px; height: 350px;" src="../ASSETS/img/Hoa khô/2-5-800x800.png" alt="">
+
+                            <li>Hoa khô trang trí có phù hợp để trang trí phòng ngủ?</li>
+                            <p class="p2">Có, hoa khô trang trí rất phù hợp để trang trí phòng ngủ. Chúng tạo không gian thư giãn và mang
+                                đến một vẻ đẹp tự nhiên và tĩnh lặng.
+                                Bạn có thể đặt hoa khô trong lọ, trên bàn đầu giường hoặc trang trí treo trên tường.
+                            </p>
+                            <img style="width: 350px; height: 350px;" src="../ASSETS/img/Hoa khô/Hoa-kho-nho-dep-trang-tri-phong-ngu-GHS-6240-ava.jpg" alt="">
+
+                            <li>Có cách nào để tái sử dụng hoa khô sau khi nó đã khô?</li>
+                            <p class="p3">Bạn có thể tái sử dụng hoa khô bằng cách đặt chúng trong khung ảnh, tạo thành vòng hoa mới, sử
+                                dụng trong thiệp handmade hoặc trang trí bao bì quà tặng.
+                                Tùy thuộc vào sự sáng tạo của bạn, có nhiều cách để tận dụng lại hoa khô.
+                            </p>
+                            <img style="width: 400px; height: 350px;" src="../ASSETS/img/Hoa khô/8c01a75941549a705cf7275e41b21f0d-scaled.jpg" alt="">
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="section-4">
+                        <h3 class="fst-italic">CHIA SẺ NHỮNG THÔNG TIN NÀY TRÊN:</h3>
+                        <a href=""><i class="fa-brands fa-facebook text-dark"></i></a>
+                        <a href=""><i class="fa-brands fa-square-whatsapp text-dark"></i></a>
+                        <a href=""><i class="fa-brands fa-square-pinterest text-dark"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <h3 class="header-title">
+            SUNFLOWER <br> <span>Vận hành bởi:</span>
+        </h3>
+        <div class="footer__info">
+            <div class="footer__left">
+                <div class="footer__left-info">
+                    <div class="footer__group">
+                        <h4>ĐẠI HỌC CÔNG NGHIỆP TP HỒ CHÍ MINH <i class="fa-solid fa-building-columns"></i></h4>
+                        <p>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Số 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, TPHCM
+                        </p>
+                    </div>
+                    
+                    <div class="footer__group">
+                        <h4>THÀNH VIÊN <i class="fa-solid fa-user-group"></i></h4>
+                        <ul>
+                            <li> <i class="fa-brands fa-servicestack"></i> Ân Hiền Bảo Phúc</li>
+                            <li> <i class="fa-brands fa-servicestack"></i> Nguyễn Minh Sang</li>
+                            <li> <i class="fa-brands fa-servicestack"></i> Dương Thái Bảo</li>
+                            <li> <i class="fa-brands fa-servicestack"></i> Phạm Vũ Khang</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer__left-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.8582379832246!2d106.68426511149357!3d10.822158889284918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174deb3ef536f31%3A0x8b7bb8b7c956157b!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2hp4buHcCBUUC5IQ00!5e0!3m2!1svi!2s!4v1698337492660!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            
+            <div class="footer__right">
+                <div class="footer__group" style="padding-right: 80px;">
+                    <h4>HỖ TRỢ <i class="fa-regular fa-circle-question"></i></h4>
+                    <ul>
+                        <li>Hotline: 1900 52 24 85</li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-facebook footer-icon"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram footer-icon"></i></a>
+                            <a href=""><i class="fa-brands fa-linkedin-in footer-icon"></i></a>
+                            <a href=""><i class="fa-brands fa-google-plus-g footer-icon"></i></a>
+                            <a href=""><i class="fa-brands fa-github footer-icon"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__group">
+                    <h4>CHÍNH SÁCH <i class="fa-solid fa-building-shield"></i></h4>
+                    <ul>
+                        <li>
+                            <a href=""><i class="fa-brands fa-servicestack"></i> Chính sách vận chuyển</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-servicestack"></i> Chính sách bảo mật thông tin</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-servicestack"></i> Điều khoản sử dụng</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-servicestack"></i> Phương thức thanh toán</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-servicestack"></i> Chính sách bảo hành</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p>© 2023 Copyright <span>Nhóm 7 | Hệ thống và Công nghệ Web</span></p>
+        </div>
+    </footer>
+</body>
+
+</html>
