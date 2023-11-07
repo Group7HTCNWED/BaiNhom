@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SunFlower - Shop Hoa Trực Tuyến | Quà Tặng</title>
+    <title>SunFlower - Shop Hoa Trực Tuyến | Giỏ Hoa</title>
 
     <link rel="icon" type="image/x-icon" href="../ASSETS/img/SideBarIcon.png">
-    
-    <link rel="stylesheet" href="../CSS/styleGift.css">
-    <link rel="stylesheet" href="../ASSETS/fonts/fontawesome-free-6.4.0-web/css/all.min.css">
-    <link rel="stylesheet" href="../CSS/bootstrap-grid.css">
+
     <link rel="stylesheet" href="../CSS/bootstrap.min.css">
-    
+    <link rel="stylesheet" href="../CSS/bootstrap.css">
+
+    <link rel="stylesheet" href="../CSS/styleFBasket.css">
+
+    <link rel="stylesheet" href="../ASSETS/fonts/fontawesome-free-6.4.0-web/css/all.min.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
 
     <script src="../JS/script.js"></script>
 </head>
@@ -56,9 +57,9 @@
                         <li><a href="Flowerbasket.html">Giỏ hoa</a></li>
                     </ul>
                 </li>
-                <li><a class="strong" href="Sale.html">Ưu đãi</a></li>
-                <li><a class="strong" href="Giftcard.html">Quà tặng</a></li>
-                <li><a class="strong" href="TakeCareFlower.html">Hướng dẫn</a></li>
+                <li><a class="strong" href="sale.html">Ưu đãi</a></li>
+                <li><a class="strong" href="giftcard.html">Quà tặng</a></li>
+                <li><a class="strong" href="takecareFlower.html">Hướng dẫn</a></li>
             </ul>
         </div>
         <div class="vector-right">
@@ -128,91 +129,9 @@
             </div>
         </div>
     </div>
-
+    
     <div class="content">
-        <hr>
-        <div class="section-header d-flex m-4 flex-column align-items-center justify-content-center">
-            <h2>
-                E-GIFT VOUCHER
-            </h2>
-            <p>Nếu bạn không biết nên mua gì cho người thân của mình, hãy tặng họ một phiếu quà tặng từ SunFlower. Phiếu quà
-                tặng này sẽ được gửi trực tiếp đến hộp thư điện tử của họ, cho phép họ tự do lựa chọn món quà mình mong
-                muốn. Đây là cách tặng quà hoàn hảo cho tất cả mọi người.</p>
-            <ol class="list-group">
-                <li class="list-group-item">
-                    <a href="#">Lựa chọn một voucher giảm giá từ 100.000₫ đến 500.000₫</a>
-                </li>
-                <li class="list-group-item">
-                    <a href="#">Gửi lời nhắn cá nhân độc đáo của bạn</a>
-                </li>
-                <li class="list-group-item">
-                    <a href="#">Chọn ngày giao phiếu quà tặng điện tử</a>
-                </li>
-                <li class="list-group-item">
-                    <a href="#">Người thân yêu của bạn sẽ tự tay chọn những bó hoa mà họ ưa thích</a>
-                </li>
-            </ol>
-        </div>
-
-        <hr>
-
-        <div class="row">
-            <div class="col-auto">
-                <img src="../assets/img/thanksGift.png" alt="">
-            </div>
-            <div class="col-lg-5">
-                <form action="giftVoucher" class="text-start p-2">
-                    <table >
-                        <tr>
-                            <td><label for="validationCustom01" class="form-label my-2">Mệnh giá voucher <span>*</span></label></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <select name="selectionPrice" id="selectionPrice" class="form-select form-control">
-                                    <option value="100.000₫">100.000₫</option>
-                                    <option value="150.000₫">150.000₫</option>
-                                    <option value="200.000₫">200.000₫</option>
-                                    <option value="250.000₫">250.000₫</option>
-                                    <option value="300.000₫">300.000₫</option>
-                                    <option value="400.000₫">400.000₫</option>
-                                    <option value="500.000₫">500.000₫</option>
-                                    <option value="700.000₫">700.000₫</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><label for="nameInput" class="form-label my-2">Tên người nhận<span>*</span></label></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="text" name="name" class="form-control px-xl-5" id="nameInput" >
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><label for="emailInput" class="form-label my-2">Email người nhận<span>*</span></label></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="email" name="email" class="form-control" id="emailInput">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><label for="" class="form-label my-2">Ghi chú:</label></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="form-floating">
-                                    <textarea name="floatingTextarea2"  cols="20" rows="3" class="form-control" style="height: 200px;" id="floatingTextarea2"></textarea>
-                                </div>
-                            </td>
-                        </tr>    
-                    </table>  
-                    <div class="btn-giftCard">
-                        <input type="button" class="btn btn-primary" value="Lưu"></input>
-                    </div>
-                </form>
-            </div>
-        </div>
+        
     </div>
 
     <footer>
@@ -288,7 +207,6 @@
             <p>© 2023 Copyright <span>Nhóm 7 | Hệ thống và Công nghệ Web</span></p>
         </div>
     </footer>
-
 </body>
 
 </html>
