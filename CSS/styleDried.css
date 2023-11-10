@@ -685,3 +685,9 @@ footer .header-title {
     margin: 0;
     color: red;
 }
+
+#search-area{
+    border-radius: 16px;
+    border: 1px solid;
+    margin-bottom: 15px;
+}
