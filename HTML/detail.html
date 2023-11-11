@@ -65,10 +65,11 @@
         </div>
         <div class="vector-right">
             <div class="header-cart">
-                <a href="#">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <p class="number-cart">0</p>
-                </a>
+                <div class="checkout">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#cart"><i
+                            class="fas fa-shopping-basket" id="icon_checkout"></i>(<span
+                            class="total-count"></span>)</a>
+                </div>
             </div>
             <div class="header-user">
                 <a href="#" id="loginBtn" onclick="openModal()">
@@ -123,6 +124,30 @@
                 </div>
             </div>
         </div>
+         <!--Modal-->
+         <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+         <div class="modal-dialog modal-lg" role="document">
+             <div class="modal-content">
+                 <div class="modal-header">
+                     <h5 class="modal-title" id="exampleModalLabel">Giỏ hàng</h5>
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                         <span aria-hidden="true">&times;</span>
+                     </button>
+                 </div>
+                 <div class="modal-body">
+                     <table class="show-cart table">
+                     </table>
+                     <div>Tổng tiền: <span class="total-cart"></span> VND</div>
+                 </div>
+                 <div class="modal-footer">
+                     <button class="clear-cart btn btn-danger">Xóa giỏ hàng</button>
+                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                     <a href="" class="btn btn-primary">Mua ngay</a>
+                 </div>
+             </div>
+         </div>
+     </div>
     </div>
 
     <div class="content">
@@ -131,11 +156,10 @@
             <hr>
         </div>
         <div class="body-card" id="detail">
-            
+
         </div>
 
     </div>
-
     <footer>
         <h3 class="header-title">
             SUNFLOWER <br> <span>Vận hành bởi:</span>
