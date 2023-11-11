@@ -4,54 +4,62 @@ var product = [
         "id": "1",
         "price": 120,
         "pic": "../ASSETS/img/Driedflower/h1.jpg",
-        "type": 1
+        "type": 1,
+        "description": "abc"
     },
     {
         "name": "Hoa hồng khô",
         "id": "2",
         "price": 150,
         "pic": "../ASSETS/img/Driedflower/h2.jpg",
-        "type": 1
+        "type": 1,
+        "description": "abc"
     },
     {
         "name": "Hoa sen khô<",
         "id": "3",
         "price": 95,
         "pic": "../ASSETS/img/Driedflower/h3.jpg",
-        "type": 1
+        "type": 1,
+        "description": "abc"
     },
     {
         "name": "Hoa cúc glixia khô",
         "id": "4",
         "price": 160,
         "pic": "../ASSETS/img/Driedflower/h4.jpg",
-        "type": 1
+        "type": 1,
+        "description": "abc"
     },
     {
         "name": "Hoa baby khô",
         "id": "5",
         "price": 135,
         "pic": "../ASSETS/img/Driedflower/h5.jpg",
-        "type": 1
+        "type": 1,
+        "description": "abc"
     },
     {
         "name": "Hoa bông gòn khô",
         "id": "6",
         "price": 50,
         "pic": "../ASSETS/img/Driedflower/h6.jpg",
-        "type": 2
+        "type": 2,
+        "description": "abc"
     }, {
         "name": "Hoa lúa mạch khô",
         "id": "7",
         "price": 70,
         "pic": "../ASSETS/img/Driedflower/h7.jpg",
-        "type": 2
+        "type": 2,
+        "description": "abc"
     }, {
         "name": "Hoa cúc nút áo khô",
         "id": "8",
         "price": 85,
         "pic": "../ASSETS/img/Driedflower/h8.jpg",
-        "type": 2
+        "type": 2,
+        "description": "abc"
     },
 ]
 
@@ -95,7 +103,7 @@ function showProduct(product) {
                 </div>
                 </a>
             </div>`
-        ;
+                ;
         }
     });
     $("#title").html(title);
@@ -145,8 +153,37 @@ function showProductDetail(product) {
     res1 = urlID.slice(-1);
     $.each(product, function (k, v) {
         if (v.id == res1) {
-            x += `<div class="col-5"><img src="${v.pic}" alt="" class="imgcrop" width="100%"></div>
-            <div class="col-7">${v.name}</div>`;
+            x += `<div class="row">
+            <div class="col-5"><img src="${v.pic}" alt="" class="imgcrop" width="100%">
+            </div>
+            <div class="col-7">
+                <div class="product-name">${v.name}</div>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <div class="price">
+                ${v.price}.000₫/100g
+                </div>
+                <div class="add-to-cart">
+                    <div class="quantity">Số lượng: 1</div>
+                    <div class="row">
+                        <div class="col-6"><a href="">Thêm vào giỏ hàng</a></div>
+                        <div class="col-6"><a href="">Mua ngay</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="description">
+            <div class="title">Thông tin sản phẩm</div>
+            <div class="product-content">
+                ${v.description}
+            </div>
+        </div>`;
         }
     });
     $("#detail").html(x);
