@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SunFlower - Shop Hoa Trực Tuyến</title>
+
+    <link rel="icon" type="image/x-icon" href="../ASSETS/img/SideBarIcon.png">
+
+    <link rel="stylesheet" href="../CSS/styleDried.css">
+    <link rel="stylesheet" href="../ASSETS/fonts/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/bootstrap-grid.css">
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="../ASSETS/bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <script src="../JS/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="sale-bar">
+            <p class="sale_message text-center">MUA 2 TẶNG 1 KHI NHẬP MÃ: 2003 <i class="fa-solid fa-ticket"></i></p>
+        </div>
+    </header>
+    <div class="header">
+        <div class="vector-left">
+            <h3 class="header-title">SUNFLOWER</h3>
+        </div>
+        <div class="vector-center">
+            <ul class="nav">
+                <li class="sl">
+                    <select>
+                        <option value="Khu vực">Khu vực</option>
+                        <option value="TPHCM">TPHCM</option>
+                        <option value="Cần Thơ">Cần Thơ</option>
+                        <option value="Đà Nẵng">Đà Nẵng</option>
+                        <option value="Hải Phòng">Hải Phòng</option>
+                        <option value="Biên Hoà">Biên Hoà</option>
+                        <option value="Hà Nội">Hà Nội</option>
+                        <option value="Tỉnh khác">Tỉnh khác</option>
+                    </select>
+                </li>
+                <li><a class="strong text-decoration-none" href="home.html">Trang chủ</a></li>
+                <li><a href="#" class="text-decoration-none">Phân loại
+                        <i class="fa-solid fa-angle-down text-sm"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="Driedflower.html">Hoa khô</a></li>
+                        <li><a href="Falseflower.html">Hoa giả</a></li>
+                        <li><a href="Flowerpot.html">Chậu hoa</a></li>
+                        <li><a href="Vases.html">Bình hoa</a></li>
+                        <li><a href="Flowerbasket.html">Giỏ hoa</a></li>
+                    </ul>
+                </li>
+                <li><a class="strong text-decoration-none" href="sale.html">Ưu đãi</a></li>
+                <li><a class="strong text-decoration-none" href="giftcard.html">Quà tặng</a></li>
+                <li><a class="strong text-decoration-none" href="TakeCareFlower.html">Hướng dẫn</a></li>
+            </ul>
+        </div>
+        <div class="vector-right">
+            <div class="header-search">
+                <input type="text" placeholder="Tìm kiếm ở đây" class="header-search-input">
+                <div class="header-search-icon">
+                    <a href="#">
+                        <i class="fa-solid fa-magnifying-glass text-dark"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="header-cart">
+                <a href="#">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p class="number-cart">0</p>
+                </a>
+            </div>
+            <div class="header-user">
+                <a href="#" id="loginBtn" onclick="openModal()">
+                    <i class="fa-solid fa-user" id="user"></i>
+                </a>
+                <div class="modal" id="myModal">
+                    <form name="form" class="box" method="post">
+                        <h4>Đăng nhập</h4>
+
+                        <div class="input-email">
+                            <i class="fa-regular fa-envelope"></i>
+                            <input id="email" class="input-email-btn" type="email" name="email" placeholder="Email" />
+                        </div>
+
+                        <div class="input-pass">
+                            <i class="fa-solid fa-lock"></i>
+                            <input id="pass" class="input-pass-btn" type="password" name="password"
+                                placeholder="Mật khẩu" />
+                        </div>
+
+                        <a href="#" class="forgetpass">Quên mật khẩu?</a>
+
+                        <div class="btn-control">
+                            <input type="button" onclick="closeModal()" class="cancel" id="cancel"
+                                value="QUAY LẠI"></input>
+                            <input type="button" onclick="closeModal()" class="submit" id="submit"
+                                value="ĐĂNG NHẬP"></input>
+                        </div>
+
+                        <div class="login-or">
+                            <div class="login-separator"></div>
+                            <h2 class="login-text">HOẶC</h2>
+                            <div class="login-separator"></div>
+                        </div>
+
+                        <div class="btn-link-control">
+                            <a href="#" class="btn-fb">
+                                <i class="fa-brands fa-facebook"></i>
+                                <p>Facebook</p>
+                            </a>
+
+                            <a href="#" class="btn-gg">
+                                <i class="fa-brands fa-google"></i>
+                                <p>Google</p>
+                            </a>
+                        </div>
+
+                        <p class="login-text-extra">Bạn chưa có tài khoản? <a href="#">Đăng ký.</a></p>
+
+                        <p id="resultModal"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid  mb-5" >
+        <div class="row justify-content-evenly">
+            <div class="col-md-5 p-5" style="border: 1px solid #ccc;">
+                <img src="../ASSETS/img/Driedflower/h1.jpg" alt="" style="width: 730px; height: 480px;"
+                    class="img-rounded">
+            </div>
+            <div class="col-md-3">
+                <nav aria-label="breadcrumb ">
+                    <ol class="breadcrumb ">
+                        <li class="breadcrumb-item "><a href="#" class="text-decoration-none link-dark">Trang chủ</a>
+                        </li>
+                        <li class="breadcrumb-item "><a href="#" class="text-decoration-none  link-dark">Phân loại</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">Hoa khô</li>
+                    </ol>
+                </nav>
+                <h1 class="p-3">Hoa Lavender khô</h1>
+                <div class="rate d-flex p-3">
+                    <span class="rate " style="color: rgb(226, 226, 7);">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span class="text-dark">11 đánh giá</span>
+                    </span>
+                </div>
+                <div class="product-title p-3">
+                    <h3><b>Giá</b></h3>
+                    <h3>980,000₫</h3>
+                </div>
+                <ul class="list-unstyled">
+                    <li><i class="fa-solid fa-truck p-3"></i> Chuyển phát nhanh</li>
+                    <li><i class="fa-solid fa-shield p-3"></i> Thanh toán an toàn</li>
+                    <li><i class="fa-solid fa-heart p-3"></i> Hỗ trợ các nhà sản xuất hàng loạt nhỏ</li>
+                    <li><i class="fa-solid fa-earth-americas p-3"></i> Có sẵn vận chuyển trên toàn thế giới</li>
+                    <li><i class="fa-solid fa-circle p-3" style="color: green;"></i> Còn hàng, sẵn sàng để giao</li>
+                </ul>
+                <p class=" p-3">Đã bao gồm thuế. </p>
+                <button class="btn btn-dark w-100 p-4 fs-3">Thêm vào giỏ hàng</button>
+            </div>
+        </div>
+    </div>
+    <div class="container section-comment my-5 ">
+        <h1 style="margin-left: 55px; font-weight: 700;"> Phản hồi khách hàng</h1>
+        <div class="row justify-content-lg-end ">
+            <div class="rate col-auto p-3">
+                <span class="rate " style="color: rgb(226, 226, 7);">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <h4 class="text-dark">Dựa trên 11 đánh giá</h4>
+                </span>
+            </div>
+            <div class="col-md-7">
+                <div class="five-star">
+                    <span class="rate" style="color: rgb(226, 226, 7);">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <div class="percentage-wrapper">
+                        <div class="progress d-inline-block" style="width: 200px; height: 20px; margin: 0;">
+                            <div class="progress-bar" role="progressbar" style="width: 91%;" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <span class="percentage-label">91% (10)</span>
+                    </div>
+                    <!-- <span>(10)</span> -->
+                </div>
+
+                <div class="four-star">
+                    <span class="rate" style="color: rgb(226, 226, 7);">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </span>
+                    <div class="percentage-wrapper">
+                        <div class="progress d-inline-block" style="width: 200px; height: 20px; margin: 0;">
+                            <div class="progress-bar" role="progressbar" style="width: 11%;" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <span class="percentage-label">11% (1)</span>
+                    </div>
+                    <!-- <span>(10)</span> -->
+                </div>
+                <div class="three-star">
+                    <span class="rate" style="color: rgb(226, 226, 7);">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </span>
+                    <div class="percentage-wrapper">
+                        <div class="progress d-inline-block" style="width: 200px; height: 20px; margin: 0;">
+                            <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <span class="percentage-label">0% (0)</span>
+                    </div>
+                    <!-- <span>(10)</span> -->
+                </div>
+                <div class="two-star">
+                    <span class="rate" style="color: rgb(226, 226, 7);">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </span>
+                    <div class="percentage-wrapper">
+                        <div class="progress d-inline-block" style="width: 200px; height: 20px; margin: 0;">
+                            <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <span class="percentage-label">0% (0)</span>
+                    </div>
+                    <!-- <span>(10)</span> -->
+                </div>
+                <div class="one-star">
+                    <span class="rate" style="color: rgb(226, 226, 7);">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </span>
+                    <div class="percentage-wrapper">
+                        <div class="progress d-inline-block" style="width: 200px; height: 20px; margin: 0;">
+                            <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <span class="percentage-label">0% (0)</span>
+                    </div>
+                    <!-- <span>(10)</span> -->
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <button class="btn btn-outline-dark p-2 fs-3">Đặt câu hỏi</button>
+            </div>
+        </div>
+        <div class="row justify-content-between my-5">
+            <div class="col-md-3 card">
+                <div class="card-body">
+                    <h3 class="card-title  my-2">Ruth Kamau</h3>
+                    <span class="verification-badge">Verified</span>
+                    <p class="date  my-2">08/03/2023</p>
+                    <div class="rating">
+                        <span class="rate" style="color: rgb(226, 226, 7);">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </span>
+                        <!-- <span>(10)</span> -->
+                    </div>
+                    <p class="review-text">
+                        Việc cắm hoa thật đẹp. Tôi nhận được một cuộc gọi để tìm hiểu xem liệu tôi có sẵn sàng thay đổi
+                        đơn đặt hàng hoa của mình hay không vì việc giao hoa màu đỏ bị chậm trễ...
+    
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3 card">
+                <div class="card-body">
+                    <h3 class="card-title  my-2">James N. Obare</h3>
+                    <span class="verification-badge">Verified</span>
+                    <p class="date  my-2">06/28/2022</p>
+                    <div class="rating">
+                        <span class="rate" style="color: rgb(226, 226, 7);">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+    
+                        </span>
+                        <!-- <span>(10)</span> -->
+                    </div>
+                    <p class="review-text">
+                        <b>Có hiệu quả</b> <br>
+                        Dịch vụ này thật tuyệt vời và hoa được giao đúng hẹn.
+    
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3 card">
+                <div class="card-body">
+                    <h3 class="card-title  my-2">AI</h3>
+                    <span class="verification-badge">Verified</span>
+                    <p class="date  my-2">05/03/2021</p>
+                    <div class="rating">
+                        <span class="rate" style="color: rgb(226, 226, 7);">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                        <!-- <span>(10)</span> -->
+                    </div>
+                    <p class="review-text">
+                        Những bông hoa được giao trong tình trạng nguyên vẹn mặc dù người giao hàng bị lạc một chút nhưng mọi thứ còn lại đều tuyệt vời!!! Cảm ơn các bạn
+    
+                    </p>
+                </div>
+    
+            </div>
+            <div class="pagination-sale" >
+                <nav aria-label="Page navigation example ">
+                    <ul class="pagination justify-content-center ">
+                        <li class="page-item"><a class="page-link text-dark fs-4"  href="#">Previous</a></li>
+                        <li class="page-item"><a class="page-link text-dark fs-4" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link text-dark fs-4" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link text-dark fs-4" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link text-dark fs-4" href="#">Next</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    
+    <footer style="margin-top: 100px;">
+        <h3 class="header-title">
+            SUNFLOWER <br> <span>Vận hành bởi:</span>
+        </h3>
+        <div class="footer__info">
+            <div class="footer__left">
+                <div class="footer__left-info">
+                    <div class="footer__group">
+                        <h4>ĐẠI HỌC CÔNG NGHIỆP TP HỒ CHÍ MINH <i class="fa-solid fa-building-columns"></i></h4>
+                        <p>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Số 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, TPHCM
+                        </p>
+                    </div>
+
+                    <div class="footer__group">
+                        <h4>THÀNH VIÊN <i class="fa-solid fa-user-group"></i></h4>
+                        <ul>
+                            <li> <i class="fa-brands fa-servicestack"></i> Ân Hiền Bảo Phúc</li>
+                            <li> <i class="fa-brands fa-servicestack"></i> Nguyễn Minh Sang</li>
+                            <li> <i class="fa-brands fa-servicestack"></i> Dương Thái Bảo</li>
+                            <li> <i class="fa-brands fa-servicestack"></i> Phạm Vũ Khang</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer__left-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.8582379832246!2d106.68426511149357!3d10.822158889284918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174deb3ef536f31%3A0x8b7bb8b7c956157b!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2hp4buHcCBUUC5IQ00!5e0!3m2!1svi!2s!4v1698337492660!5m2!1svi!2s"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <div class="footer__right">
+                <div class="footer__group" style="padding-right: 80px;">
+                    <h4>HỖ TRỢ <i class="fa-regular fa-circle-question"></i></h4>
+                    <ul>
+                        <li>Hotline: 1900 52 24 85</li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-facebook footer-icon"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram footer-icon"></i></a>
+                            <a href=""><i class="fa-brands fa-linkedin-in footer-icon"></i></a>
+                            <a href=""><i class="fa-brands fa-google-plus-g footer-icon"></i></a>
+                            <a href=""><i class="fa-brands fa-github footer-icon"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__group">
+                    <h4>CHÍNH SÁCH <i class="fa-solid fa-building-shield"></i></h4>
+                    <ul>
+                        <li>
+                            <a href=""><i class="fa-brands fa-servicestack"></i> Chính sách vận chuyển</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-servicestack"></i> Chính sách bảo mật thông tin</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-servicestack"></i> Điều khoản sử dụng</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-servicestack"></i> Phương thức thanh toán</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-servicestack"></i> Chính sách bảo hành</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p>© 2023 Copyright <span>Nhóm 7 | Hệ thống và Công nghệ Web</span></p>
+        </div>
+    </footer>
+
+
+</body>
