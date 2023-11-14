@@ -3364,6 +3364,9 @@ textarea.form-control-lg {
     transition: none;
   }
 }
+.fade:not(.in) {
+  opacity: 0;
+}
 .fade:not(.show) {
   opacity: 0;
 }

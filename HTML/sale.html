@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="../assets/img/SideBarIcon.png">
 
     <link rel="stylesheet" href="../CSS/bootstrap.min.css">
-    <link rel="stylesheet" href="../CSS/bootstrap.css">
+    <link rel="stylesheet" href="../CSS/bootstrap-grid.css">
 
     <link rel="stylesheet" href="../CSS/styleSale.css">
 
@@ -29,7 +29,9 @@
     </header>
     <div class="header my-5">
         <div class="vector-left">
-            <h3 class="header-title">SUNFLOWER</h3>
+            <a href="../HTML/home.html">
+                <h3 class="header-title">SUNFLOWER</h3>
+            </a>
         </div>
         <div class="vector-center">
             <ul class="nav">
@@ -46,15 +48,15 @@
                     </select>
                 </li>
                 <li><a class="strong" href="home.html">Trang chủ</a></li>
-                <li><a href="#">Phân loại
+                <li><a href="#">Sản phẩm
                         <i class="fa-solid fa-angle-down text-sm"></i>
                     </a>
                     <ul class="subnav">
-                        <li><a href="Driedflower.html">Hoa khô</a></li>
-                        <li><a href="Falseflower.html">Hoa giả</a></li>
-                        <li><a href="Flowerpot.html">Chậu hoa</a></li>
-                        <li><a href="Vases.html">Bình hoa</a></li>
-                        <li><a href="Flowerbasket.html">Giỏ hoa</a></li>
+                        <li><a href="product.html?h1">Hoa khô</a></li>
+                        <li><a href="product.html?h2">Hoa giả</a></li>
+                        <li><a href="product.html?h3">Chậu hoa</a></li>
+                        <li><a href="product.html?h4">Bình hoa</a></li>
+                        <li><a href="product.html?h5">Giỏ hoa</a></li>
                     </ul>
                 </li>
                 <li><a class="strong" href="sale.html">Ưu đãi</a></li>
@@ -63,20 +65,13 @@
             </ul>
         </div>
         <div class="vector-right">
-            <div class="header-search">
-                <input type="text" placeholder="Tìm kiếm ở đây" class="header-search-input">
-                <div class="header-search-icon">
-                    <a href="#">
-                        <i class="fa-solid fa-magnifying-glass text-dark"></i>
-                    </a>
-                </div>
-            </div>
-
             <div class="header-cart">
-                <a href="#">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <p class="number-cart">0</p>
-                </a>
+                <div class="checkout" style="width: 150px;">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#cart"><i
+                            class="fas fa-shopping-basket" id="icon_checkout"></i>(<span
+                            class="total-count"></span>)</a>
+                </div>
+
             </div>
             <div class="header-user">
                 <a href="#" id="loginBtn" onclick="openModal()">
@@ -132,7 +127,30 @@
             </div>
         </div>
     </div>
-
+    <!-- Modal -->
+    <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Giỏ hàng</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="show-cart table">
+                    </table>
+                    <div>Tổng tiền: <span class="total-cart"></span> VND</div>
+                </div>
+                <div class="modal-footer">
+                    <button class="clear-cart btn btn-danger">Xóa giỏ hàng</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                    <a href="" class="btn btn-primary">Mua ngay</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="section-header m-4 ">
         <h1>
             "Rộn ràng màu sắc, tinh tế hương thơm, và giá trị đặc biệt. <br> Chúng tôi giảm giá để bạn có thể gửi tình
@@ -393,6 +411,7 @@
                 <p>© 2023 Copyright <span>Nhóm 7 | Hệ thống và Công nghệ Web</span></p>
             </div>
         </footer>
+        <script src="../JS/product.js"></script>
 </body>
 
 </html>

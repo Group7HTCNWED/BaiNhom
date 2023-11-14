@@ -30,7 +30,9 @@
     </header>
     <div class="header my-5">
         <div class="vector-left">
-            <h3 class="header-title">SUNFLOWER</h3>
+            <a href="../HTML/home.html">
+                <h3 class="header-title">SUNFLOWER</h3>
+            </a>
         </div>
         <div class="vector-center">
             <ul class="nav">
@@ -47,15 +49,15 @@
                     </select>
                 </li>
                 <li><a class="strong" href="home.html">Trang chủ</a></li>
-                <li><a href="#">Phân loại
+                <li><a href="#">Sản phẩm
                         <i class="fa-solid fa-angle-down text-sm"></i>
                     </a>
                     <ul class="subnav">
-                        <li><a href="Driedflower.html">Hoa khô</a></li>
-                        <li><a href="Falseflower.html">Hoa giả</a></li>
-                        <li><a href="Flowerpot.html">Chậu hoa</a></li>
-                        <li><a href="Vases.html">Bình hoa</a></li>
-                        <li><a href="Flowerbasket.html">Giỏ hoa</a></li>
+                        <li><a href="product.html?h1">Hoa khô</a></li>
+                        <li><a href="product.html?h2">Hoa giả</a></li>
+                        <li><a href="product.html?h3">Chậu hoa</a></li>
+                        <li><a href="product.html?h4">Bình hoa</a></li>
+                        <li><a href="product.html?h5">Giỏ hoa</a></li>
                     </ul>
                 </li>
                 <li><a class="strong" href="sale.html">Ưu đãi</a></li>
@@ -64,20 +66,12 @@
             </ul>
         </div>
         <div class="vector-right">
-            <div class="header-search">
-                <input type="text" placeholder="Tìm kiếm ở đây" class="header-search-input">
-                <div class="header-search-icon">
-                    <a href="#">
-                        <i class="fa-solid fa-magnifying-glass text-dark"></i>
-                    </a>
-                </div>
-            </div>
-            
             <div class="header-cart">
-                <a href="#">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <p class="number-cart">0</p>
-                </a>
+                <div class="checkout" style="width: 150px;">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#cart"><i
+                            class="fas fa-shopping-basket" id="icon_checkout"></i>(<span
+                            class="total-count"></span>)</a>
+                </div>
             </div>
             <div class="header-user">
                 <a href="#" id="loginBtn" onclick="openModal()">
@@ -86,22 +80,23 @@
                 <div class="modal" id="myModal">
                     <form name="form" class="box" method="post">
                         <h4>Đăng nhập</h4>
-                        
+
                         <div class="input-email">
                             <i class="fa-regular fa-envelope fs-5"></i>
-                            <input id="email" class="input-email-btn" type="email" name="email" placeholder="Email"/>
+                            <input id="email" class="input-email-btn" type="email" name="email" placeholder="Email" />
                         </div>
-                        
+
                         <div class="input-pass">
                             <i class="fa-solid fa-lock fs-5"></i>
-                            <input id="pass" class="input-pass-btn" type="password" name="password" placeholder="Mật khẩu"/>
+                            <input id="pass" class="input-pass-btn" type="password" name="password"
+                                placeholder="Mật khẩu" />
                         </div>
-                    
+
                         <a href="#" class="forgetpass">Quên mật khẩu?</a>
-                
+
                         <div class="btn-control">
-                            <a onclick="closeModal()" class="cancel btn btn-outline-dark" id="cancel" >QUAY LẠI</a>
-                            <a onclick="closeModal()" class="submit btn btn-outline-dark" id="submit" >ĐĂNG NHẬP</a>
+                            <a onclick="closeModal()" class="cancel btn btn-outline-dark" id="cancel">QUAY LẠI</a>
+                            <a onclick="closeModal()" class="submit btn btn-outline-dark" id="submit">ĐĂNG NHẬP</a>
                         </div>
 
                         <div class="login-or">
@@ -130,8 +125,31 @@
             </div>
         </div>
     </div>
-
-<div class="slider my-4">
+    <!-- Modal -->
+    <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Giỏ hàng</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="show-cart table">
+                    </table>
+                    <div>Tổng tiền: <span class="total-cart"></span> VND</div>
+                </div>
+                <div class="modal-footer">
+                    <button class="clear-cart btn btn-danger">Xóa giỏ hàng</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                    <a href="" class="btn btn-primary">Mua ngay</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slider my-4">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" style="position: relative;">
             <ul class="carousel-indicators list-unstyled ">
                 <li data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="0" class="active"></li>
@@ -161,15 +179,17 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        <div class="content__best" style="position: absolute; z-index: 1; top: 0; left: 0 ; right: 0 ;margin-top: 30%; padding: 20px;">
-            
-            <h2 style="font-weight: 1000;margin-left: 150px;">"Mỗi bông hoa là một linh hồn<br> <span>nở rộ trong tự nhiên mang lại hy vọng cho sự sống"</span></h2>
+        <div class="content__best"
+            style="position: absolute; z-index: 1; top: 0; left: 0 ; right: 0 ;margin-top: 30%; padding: 20px;">
+
+            <h2 style="font-weight: 1000;margin-left: 150px;">"Mỗi bông hoa là một linh hồn<br> <span>nở rộ trong tự
+                    nhiên mang lại hy vọng cho sự sống"</span></h2>
         </div>
     </div>
 
 
     <div class="content">
-        
+
 
         <div class="content__main-title">
             <div class="content__main-separator"></div>
@@ -205,60 +225,73 @@
         <div class="content__promotion">
             <div class="content__promotion-item">
                 <a href="#">
-                    <img src="../ASSETS/img/Hoa Hoè/hoa_cẩm_chướng.jpg" alt="Hoa Cẩm Chướng" class="content__promotion-item-img">
+                    <img src="../ASSETS/img/Hoa Hoè/hoa_cẩm_chướng.jpg" alt="Hoa Cẩm Chướng"
+                        class="content__promotion-item-img">
                 </a>
                 <p class="content__promotion-name">Hoa Cẩm Chướng</p>
-                <p class="content__promotion-price"><del style="padding-right: 16px; color: #555555">400.000 <sup>đ</sup></del> <ins>350.000</ins> <sup>đ</sup></p>
+                <p class="content__promotion-price"><del style="padding-right: 16px; color: #555555">400.000
+                        <sup>đ</sup></del> <ins>350.000</ins> <sup>đ</sup></p>
             </div>
 
             <div class="content__promotion-item">
                 <a href="">
-                      <img src="../ASSETS/img/Hoa Hoè/hoa_hồng.jpg" alt="Hoa Hồng" class="content__promotion-item-img">
+                    <img src="../ASSETS/img/Hoa Hoè/hoa_hồng.jpg" alt="Hoa Hồng" class="content__promotion-item-img">
                 </a>
                 <p class="content__promotion-name">Hoa Hồng</p>
-                <p class="content__promotion-price"><del style="padding-right: 16px; color: #555555">280.000 <sup>đ</sup></del><ins>220.000</ins> <sup>đ</sup></p>
+                <p class="content__promotion-price"><del style="padding-right: 16px; color: #555555">280.000
+                        <sup>đ</sup></del><ins>220.000</ins> <sup>đ</sup></p>
             </div>
 
             <div class="content__promotion-item">
                 <a href="">
-                    <img src="../ASSETS/img/Hoa Hoè/hoa_hải_đường.jpg" alt="Hoa Hải Đường" class="content__promotion-item-img">
+                    <img src="../ASSETS/img/Hoa Hoè/hoa_hải_đường.jpg" alt="Hoa Hải Đường"
+                        class="content__promotion-item-img">
                 </a>
                 <p class="content__promotion-name">Hoa Hải Đường</p>
-                <p class="content__promotion-price"><del style="padding-right: 16px; color: #555555">230.000 <sup>đ</sup></del><ins>195.000</ins> <sup>đ</sup></p>
+                <p class="content__promotion-price"><del style="padding-right: 16px; color: #555555">230.000
+                        <sup>đ</sup></del><ins>195.000</ins> <sup>đ</sup></p>
             </div>
 
             <div class="content__promotion-item">
                 <a href="">
-                      <img src="../ASSETS/img/Hoa Hoè/hoa_thạch_thảo.jpg" alt="Hoa Thạch Thảo" class="content__promotion-item-img">
+                    <img src="../ASSETS/img/Hoa Hoè/hoa_thạch_thảo.jpg" alt="Hoa Thạch Thảo"
+                        class="content__promotion-item-img">
                 </a>
                 <p class="content__promotion-name">Hoa Thạch Thảo</p>
-                <p class="content__promotion-price"><del style="padding-right: 16px; color: #555555">320.000 <sup>đ</sup></del><ins>280.000</ins> <sup>đ</sup></p>
+                <p class="content__promotion-price"><del style="padding-right: 16px; color: #555555">320.000
+                        <sup>đ</sup></del><ins>280.000</ins> <sup>đ</sup></p>
             </div>
 
             <div class="content__promotion-item">
                 <a href="">
-                    <img src="../ASSETS/img/Hoa Hoè/hoa_tràm_Đài_Loan.jpg" alt="Hoa Tràm Đài Loan" class="content__promotion-item-img">
+                    <img src="../ASSETS/img/Hoa Hoè/hoa_tràm_Đài_Loan.jpg" alt="Hoa Tràm Đài Loan"
+                        class="content__promotion-item-img">
                 </a>
                 <p class="content__promotion-name">Hoa Tràm Đài Loan</p>
-                <p class="content__promotion-price"><del style="padding-right: 16px; color: #555555">200.000 <sup>đ</sup></del><ins>180.000</ins> <sup>đ</sup></p>
+                <p class="content__promotion-price"><del style="padding-right: 16px; color: #555555">200.000
+                        <sup>đ</sup></del><ins>180.000</ins> <sup>đ</sup></p>
             </div>
         </div>
 
         <div class="content__promotion">
             <div class="content__promotion-item">
                 <a href="">
-                    <img src="../ASSETS/img/Hoa Hoè/cúc_hoạ_mi.jpg" alt="cHoa Cúc Hoạ Mi" class="content__promotion-item-img">
+                    <img src="../ASSETS/img/Hoa Hoè/cúc_hoạ_mi.jpg" alt="cHoa Cúc Hoạ Mi"
+                        class="content__promotion-item-img">
                 </a>
                 <p class="content__promotion-name">Hoa Cúc Hoạ Mi</p>
-                <p class="content__promotion-price"><del style="padding-right: 16px; color: #555555">250.000 <sup>đ</sup></del><ins>210.000</ins> <sup>đ</sup></p>
+                <p class="content__promotion-price"><del style="padding-right: 16px; color: #555555">250.000
+                        <sup>đ</sup></del><ins>210.000</ins> <sup>đ</sup></p>
             </div>
 
             <div class="content__promotion-item">
                 <a href="">
-                    <img src="../ASSETS/img/Hoa Hoè/hoa_anh_túc.jpg" alt="Hoa Anh Túc" class="content__promotion-item-img">
+                    <img src="../ASSETS/img/Hoa Hoè/hoa_anh_túc.jpg" alt="Hoa Anh Túc"
+                        class="content__promotion-item-img">
                 </a>
                 <p class="content__promotion-name">Hoa Anh Túc</p>
-                <p class="content__promotion-price"><del style="padding-right: 16px; color: #555555">180.000 <sup>đ</sup></del><ins>150.000</ins> <sup>đ</sup></p>
+                <p class="content__promotion-price"><del style="padding-right: 16px; color: #555555">180.000
+                        <sup>đ</sup></del><ins>150.000</ins> <sup>đ</sup></p>
             </div>
 
             <div class="content__promotion-item">
@@ -266,33 +299,40 @@
                     <img src="../ASSETS/img/Hoa Hoè/HOA_CUC.JPG" alt="Hoa Cúc" class="content__promotion-item-img">
                 </a>
                 <p class="content__promotion-name">Hoa Cúc</p>
-                <p class="content__promotion-price"><del style="padding-right: 16px; color: #555555">65.000 <sup>đ</sup></del><ins>50.000</ins> <sup>đ</sup></p>
+                <p class="content__promotion-price"><del style="padding-right: 16px; color: #555555">65.000
+                        <sup>đ</sup></del><ins>50.000</ins> <sup>đ</sup></p>
             </div>
 
             <div class="content__promotion-item">
                 <a href="">
-                    <img src="../ASSETS/img/Hoa Hoè/hoa_bất_tử.jpg" alt="Hoa Bất Tử" class="content__promotion-item-img">
+                    <img src="../ASSETS/img/Hoa Hoè/hoa_bất_tử.jpg" alt="Hoa Bất Tử"
+                        class="content__promotion-item-img">
                 </a>
                 <p class="content__promotion-name">Hoa Bất Tử</p>
-                <p class="content__promotion-price"><del style="padding-right: 16px; color: #555555">110.000 <sup>đ</sup></del><ins>95.000</ins> <sup>đ</sup></p>
+                <p class="content__promotion-price"><del style="padding-right: 16px; color: #555555">110.000
+                        <sup>đ</sup></del><ins>95.000</ins> <sup>đ</sup></p>
             </div>
 
             <div class="content__promotion-item">
                 <a href="">
-                    <img src="../ASSETS/img/Hoa Hoè/hoa_bỉ_ngạn.jpg" alt="Hoa Bỉ Ngạn" class="content__promotion-item-img">
+                    <img src="../ASSETS/img/Hoa Hoè/hoa_bỉ_ngạn.jpg" alt="Hoa Bỉ Ngạn"
+                        class="content__promotion-item-img">
                 </a>
                 <p class="content__promotion-name">Hoa Bỉ ngạn</p>
-                <p class="content__promotion-price"><del style="padding-right: 16px; color: #555555">125.000 <sup>đ</sup></del><ins>100.000</ins> <sup>đ</sup></p>
+                <p class="content__promotion-price"><del style="padding-right: 16px; color: #555555">125.000
+                        <sup>đ</sup></del><ins>100.000</ins> <sup>đ</sup></p>
             </div>
         </div>
 
         <div class="content__promotion">
             <div class="content__promotion-item">
                 <a href="">
-                    <img src="../ASSETS/img/Hoa Hoè/hoa_cát_tường.jpg" alt="Hoa Cát Tường" class="content__promotion-item-img">
+                    <img src="../ASSETS/img/Hoa Hoè/hoa_cát_tường.jpg" alt="Hoa Cát Tường"
+                        class="content__promotion-item-img">
                 </a>
                 <p class="content__promotion-name">Hoa Cát Tường</p>
-                <p class="content__promotion-price"><del style="padding-right: 16px; color: #555555">90.000 <sup>đ</sup></del><ins>75.000</ins> <sup>đ</sup></p>
+                <p class="content__promotion-price"><del style="padding-right: 16px; color: #555555">90.000
+                        <sup>đ</sup></del><ins>75.000</ins> <sup>đ</sup></p>
             </div>
 
             <div class="content__promotion-item">
@@ -300,31 +340,38 @@
                     <img src="../ASSETS/img/Hoa Hoè/hoa_baby.jpg" alt="Hoa Baby" class="content__promotion-item-img">
                 </a>
                 <p class="content__promotion-name">Hoa Baby</p>
-                <p class="content__promotion-price"><del style="padding-right: 16px; color: #555555">245.000 <sup>đ</sup></del><ins>215.000</ins> <sup>đ</sup></p>
+                <p class="content__promotion-price"><del style="padding-right: 16px; color: #555555">245.000
+                        <sup>đ</sup></del><ins>215.000</ins> <sup>đ</sup></p>
             </div>
 
             <div class="content__promotion-item">
                 <a href="">
-                    <img src="../ASSETS/img/Hoa Hoè/hoa_cúc_calimero.jpg" alt="Hoa Cúc Calimero" class="content__promotion-item-img">
+                    <img src="../ASSETS/img/Hoa Hoè/hoa_cúc_calimero.jpg" alt="Hoa Cúc Calimero"
+                        class="content__promotion-item-img">
                 </a>
                 <p class="content__promotion-name">Hoa Cúc Calimero</p>
-                <p class="content__promotion-price"><del style="padding-right: 16px; color: #555555">80.000 <sup>đ</sup></del><ins>70.000</ins> <sup>đ</sup></p>
+                <p class="content__promotion-price"><del style="padding-right: 16px; color: #555555">80.000
+                        <sup>đ</sup></del><ins>70.000</ins> <sup>đ</sup></p>
             </div>
 
             <div class="content__promotion-item">
                 <a href="">
-                    <img src="../ASSETS/img/Hoa Hoè/hoa_cúc_mẫu_đơn.jpg" alt="Cúc Mẫu Đơn" class="content__promotion-item-img">
+                    <img src="../ASSETS/img/Hoa Hoè/hoa_cúc_mẫu_đơn.jpg" alt="Cúc Mẫu Đơn"
+                        class="content__promotion-item-img">
                 </a>
                 <p class="content__promotion-name">Hoa Cúc Mẫu Đơn</p>
-                <p class="content__promotion-price"><del style="padding-right: 16px; color: #555555">200.000 <sup>đ</sup></del><ins>175.000</ins> <sup>đ</sup></p>
+                <p class="content__promotion-price"><del style="padding-right: 16px; color: #555555">200.000
+                        <sup>đ</sup></del><ins>175.000</ins> <sup>đ</sup></p>
             </div>
 
             <div class="content__promotion-item">
                 <a href="">
-                    <img src="../ASSETS/img/Hoa Hoè/hoa_cúc_pingpong.jpg" alt="Hoa Pingpong" class="content__promotion-item-img">
+                    <img src="../ASSETS/img/Hoa Hoè/hoa_cúc_pingpong.jpg" alt="Hoa Pingpong"
+                        class="content__promotion-item-img">
                 </a>
                 <p class="content__promotion-name">Hoa PingPong</p>
-                <p class="content__promotion-price"><del style="padding-right: 16px; color: #555555">95.000 <sup>đ</sup></del><ins>80.000</ins> <sup>đ</sup></p>
+                <p class="content__promotion-price"><del style="padding-right: 16px; color: #555555">95.000
+                        <sup>đ</sup></del><ins>80.000</ins> <sup>đ</sup></p>
             </div>
         </div>
 
@@ -392,7 +439,7 @@
             <input id="phone" type="tel" class="content__info-phone" placeholder="Số điện thoại"> <br>
             <input type="button" id="sr" class="content__info-btn" onclick="checkInfo()" value="Đăng ký"> <br>
             <p id="result"></p>
-        </div>    
+        </div>
     </div>
 
     <footer>
@@ -409,7 +456,7 @@
                             Số 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, TPHCM
                         </p>
                     </div>
-                    
+
                     <div class="footer__group">
                         <h4>THÀNH VIÊN <i class="fa-solid fa-user-group"></i></h4>
                         <ul>
@@ -422,10 +469,13 @@
                 </div>
 
                 <div class="footer__left-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.8582379832246!2d106.68426511149357!3d10.822158889284918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174deb3ef536f31%3A0x8b7bb8b7c956157b!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2hp4buHcCBUUC5IQ00!5e0!3m2!1svi!2s!4v1698337492660!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.8582379832246!2d106.68426511149357!3d10.822158889284918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174deb3ef536f31%3A0x8b7bb8b7c956157b!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2hp4buHcCBUUC5IQ00!5e0!3m2!1svi!2s!4v1698337492660!5m2!1svi!2s"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
-            
+
             <div class="footer__right">
                 <div class="footer__group" style="padding-right: 80px;">
                     <h4>HỖ TRỢ <i class="fa-regular fa-circle-question"></i></h4>
@@ -468,6 +518,7 @@
             <p>© 2023 Copyright <span>Nhóm 7 | Hệ thống và Công nghệ Web</span></p>
         </div>
     </footer>
+    <script src="../JS/product.js"></script>
 </body>
 
 
