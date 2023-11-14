@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SunFlower - Shop Hoa Trực Tuyến | Hoa Khô</title>
+
+    <link rel="icon" type="image/x-icon" href="../ASSETS/img/SideBarIcon.png">
+
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/bootstrap.css">
+
+    <link rel="stylesheet" href="../CSS/styleDried.css">
+
+    <link rel="stylesheet" href="../ASSETS/fonts/fontawesome-free-6.4.0-web/css/all.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+
+    <script src="../JS/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="sale-bar">
+            <p class="sale_message text-center">MUA 2 TẶNG 1 KHI NHẬP MÃ: 2003 <i class="fa-solid fa-ticket"></i></p>
+        </div>
+    </header>
+    <div class="header">
+        <div class="vector-left">
+            <h3 class="header-title">SUNFLOWER</h3>
+        </div>
+        <div class="vector-center">
+            <ul class="nav">
+                <li class="sl">
+                    <select>
+                        <option value="Khu vực">Khu vực</option>
+                        <option value="TPHCM">TPHCM</option>
+                        <option value="Cần Thơ">Cần Thơ</option>
+                        <option value="Đà Nẵng">Đà Nẵng</option>
+                        <option value="Hải Phòng">Hải Phòng</option>
+                        <option value="Biên Hoà">Biên Hoà</option>
+                        <option value="Hà Nội">Hà Nội</option>
+                        <option value="Tỉnh khác">Tỉnh khác</option>
+                    </select>
+                </li>
+                <li><a class="strong" href="home.html">Trang chủ</a></li>
+                <li><a href="#">Phân loại
+                        <i class="fa-solid fa-angle-down text-sm"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="Driedflower.html">Hoa khô</a></li>
+                        <li><a href="Falseflower.html">Hoa giả</a></li>
+                        <li><a href="Flowerpot.html">Chậu hoa</a></li>
+                        <li><a href="Vases.html">Bình hoa</a></li>
+                        <li><a href="Flowerbasket.html">Giỏ hoa</a></li>
+                    </ul>
+                </li>
+                <li><a class="strong" href="sale.html">Ưu đãi</a></li>
+                <li><a class="strong" href="giftcard.html">Quà tặng</a></li>
+                <li><a class="strong" href="takecareFlower.html">Hướng dẫn</a></li>
+            </ul>
+        </div>
+        <div class="vector-right">
+            <div class="header-search">
+                <input type="text" placeholder="Tìm kiếm ở đây" class="header-search-input">
+                <div class="header-search-icon">
+                    <a href="#">
+                        <i class="fa-solid fa-magnifying-glass text-dark"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="header-cart">
+                <a href="#">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p class="number-cart">0</p>
+                </a>
+            </div>
+            <div class="header-user">
+                <a href="#" id="loginBtn" onclick="openModal()">
+                    <i class="fa-solid fa-user" id="user"></i>
+                </a>
+                <div class="modal" id="myModal">
+                    <form name="form" class="box" method="post">
+                        <h4>Đăng nhập</h4>
+                        
+                        <div class="input-email">
+                            <i class="fa-regular fa-envelope"></i>
+                            <input id="email" class="input-email-btn" type="email" name="email" placeholder="Email"/>
+                        </div>
+                        
+                        <div class="input-pass">
+                            <i class="fa-solid fa-lock"></i>
+                            <input id="pass" class="input-pass-btn" type="password" name="password" placeholder="Mật khẩu"/>
+                        </div>
+                    
+                        <a href="#" class="forgetpass">Quên mật khẩu?</a>
+                
+                        <div class="btn-control">
+                            <input type="button" onclick="closeModal()" class="cancel" id="cancel" value="QUAY LẠI"></input>
+                            <input type="button" onclick="closeModal()" class="submit" id="submit" value="ĐĂNG NHẬP"></input>
+                        </div>
+
+                        <div class="login-or">
+                            <div class="login-separator"></div>
+                            <h2 class="login-text">HOẶC</h2>
+                            <div class="login-separator"></div>
+                        </div>
+
+                        <div class="btn-link-control">
+                            <a href="#" class="btn-fb">
+                                <i class="fa-brands fa-facebook"></i>
+                                <p>Facebook</p>
+                            </a>
+
+                            <a href="#" class="btn-gg">
+                                <i class="fa-brands fa-google"></i>
+                                <p>Google</p>
+                            </a>
+                        </div>
+
+                        <p class="login-text-extra">Bạn chưa có tài khoản? <a href="#">Đăng ký.</a></p>
+
+                        <p id="resultModal"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content">
+        <div class="content-title">
+            <h2 class="content-title-text">Giỏ hoa trang trí </h2>
+            <hr>
+        </div>
+        
+        <div class="main">
+            <div class="left">
+                <div class="orderby-main">
+                    <h4 class="orderby-title"><i class="fa-solid fa-sort"></i> Sắp xếp theo:</h4>
+                    <ul class="orderby">
+                        <li>
+                            <a href="#">Bán chạy</a>
+                        </li>
+                        <li>
+                            <a href="#">Mới nhất</a>
+                        </li>
+                        <li>
+                            <a href="#">Giá thấp đến cao</a>
+                        </li>
+                        <li>
+                            <a href="#">Giá cao đến thấp</a>
+                        </li>
+                    </ul>
+                </div>
+        
+                <div class="filter-main">
+                    <h4 class="filter-title"><i class="fa-solid fa-filter"></i> Lọc nhanh:</h4>
+                    <div class="filter">
+                        <h5>Giá: <span id="resultPrice">650000 VND</span></h5>
+                        <input type="range" name="price" class="price" min="50000" max="750000" step="10" oninput="printPrice(this)">
+
+                        <h5>Điểm đánh giá:</h5>
+                        <div class="input-rate">
+                            <input type="checkbox" name="rate" id="1s">
+                            <label for="1s">⭐</label>
+                        </div>
+                        <div class="input-rate">
+                            <input type="checkbox" name="rate" id="2s">
+                            <label for="2s">⭐⭐</label> 
+                        </div>
+                        <div class="input-rate">
+                            <input type="checkbox" name="rate" id="3s">
+                            <label for="3s">⭐⭐⭐</label>
+                        </div>
+                        <div class="input-rate">
+                            <input type="checkbox" name="rate" id="4s">
+                            <label for="4s">⭐⭐⭐⭐</label>
+                        </div>
+                        <div class="input-rate">
+                            <input type="checkbox" name="rate" id="5s">
+                            <label for="5s">⭐⭐⭐⭐⭐</label>
+                        </div>
+
+                      
+
+                        <h5>Khuyến mãi:</h5>
+                        <input type="radio" name="sale" id="sale1">
+                        <label id="lf1" for="sale1">Có</label>
+                        <input type="radio" name="sale" id="sale2">
+                        <label id="lf2" for="sale2">Không</label>
+                    </div>
+
+                    <input type="button" class="btn btn-danger" value="Áp dụng">
+                </div>
+            </div>
+    
+            <div class="right">
+                <div class="row">
+                    <div class="col">
+                        <div class="thumbnail">
+                            <img src="../ASSETS/img/Giỏ hoa/h1.jpg" alt="" class="imgcrop">
+                            <div class="card-body">
+                                <h3>Giỏ Hoa Mây</h3>
+                                <p>169.000₫</p>
+                                <input type="button" class="btn btn-outline-danger" value="Mua ngay"></input>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="thumbnail">
+                            <img src="../ASSETS/img/Giỏ hoa/h2.jpg" alt="" class="imgcrop">
+                            <div class="card-body">
+                                <h3>Hoa giả/ Hoa lụa - Chùm hoa đỗ quyên treo tường</h3>
+                                <p>59.000₫</p>
+                                <input type="button" class="btn btn-outline-danger" value="Mua ngay"></input>
+                            </div>
+                        </div>
+                        <br><br>
+                    </div>
+                    <div class="col">
+                        <div class="thumbnail">
+                            <img src="../ASSETS/img/Giỏ hoa/h3.jpg" alt="" class="imgcrop">
+                            <div class="card-body">
+                                <h3>Giỏ Hoa Treo Tường - gỗ thông</h3>
+                                <p>89.000₫</p>
+                                <input type="button" class="btn btn-outline-danger" value="Mua ngay"></input>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="thumbnail">
+                            <img src="../ASSETS/img/Giỏ hoa/h4.jpg" alt="" class="imgcrop">
+                            <div class="card-body">
+                                <h3>Giỏ hoa lụa - Xe đạp hoa hồng tỉ muội để bàn cao 20cm trang trí nhà cửa</h3>
+                                <p>189.000₫</p>
+                                <input type="button" class="btn btn-outline-danger" value="Mua ngay"></input>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="thumbnail">
+                            <img src="../ASSETS/img/Giỏ hoa/h5.jpg" alt="" class="imgcrop">
+                            <div class="card-body">
+                                <h3>Giỏ nhựa giả mây ốp tường </h6>
+                                <p>39.000₫/100g</p>
+                                <input type="button" class="btn btn-outline-danger" value="Mua ngay"></input>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="thumbnail">
+                            <img src="../ASSETS/img/Giỏ hoa/h6.jpg" alt="" class="imgcrop">
+                            <div class="card-body">
+                                <h3>Hoa lụa, giỏ hoa cúc họa mi đẹp cắm sẵn hàng rào gỗ</h3>
+                                <p>100.000₫</p>
+                                <input type="button" class="btn btn-outline-danger" value="Mua ngay"></input>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="thumbnail">
+                            <img src="../ASSETS/img/Giỏ hoa/h7.jpg" alt="" class="imgcrop">
+                            <div class="card-body">
+                                <h3>Hoa Giả, Giỏ Hoa Treo Ban Công, Cửa Sổ, Mái Hiên, Giỏ Hoa Trang Trí Nhà Cửa</h3>
+                                <p>75.000₫</p>
+                                <input type="button" class="btn btn-outline-danger" value="Mua ngay"></input>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="thumbnail">
+                            <img src="../ASSETS/img/Giỏ hoa/h8.jpg" alt="" class="imgcrop">
+                            <div class="card-body">
+                                <h3>Giỏ hoa trang trí sáng tạo bằng gốm</h3>
+                                <p>49.000₫</p>
+                                <input type="button" class="btn btn-outline-danger" value="Mua ngay"></input>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination-sale">
+                    <div aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item">
+                                <a class="page-link text-dark" href="#">Trang đầu</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link text-dark" href="#">1</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link text-dark" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link text-dark" href="#">3</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link text-dark" href="#">Trang cuối</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <hr/>
+                <div class="container">
+                    <div class="section-1">
+                        <h3>Giỏ hoa trang trí là gì?</h3>
+                        <img src="../ASSETS/img/Giỏ hoa/giohoa1.jpg" alt="">
+                        <p class="p-1">Giỏ hoa lụa hay giỏ hoa giả là một món quà tặng trang trí không thể thiếu để làm nổi bật không gian trong các dịp quan trọng. Được làm từ những vật liệu như giỏ mây tre đan, túi giấy, hoa lụa, cành lá trang trí kết hợp dây ruy băng tạo nên một tổng thể hoàn hảo. </p>
+                    </div>
+                    
+                    <div class="section-2">
+                        <h3>Mua giỏ hoa giả để làm gì?</h3>
+                        <p>Giỏ hoa giả từ lâu được nhiều người sử dụng để làm quà tặng trong các dịp quan trọng. Nó là giải pháp hoàn hảo cho bạn nếu không nghĩ ra được một món quà nào phù hợp với sở thích của người thân. Bởi lẽ, điểm đặc biệt của món quà này nằm ở tinh thần và sự quan tâm của bạn dành cho đối phương.</p>
+                    </div>
+                    
+                    <div class="section-3">
+                        <h3>Một số lưu ý trước khi chọn mua giỏ hoa giả</h3>
+                        <ul>
+                            Để chọn được một giỏ hoa giả ưng ý và phù hợp với không gian trang trí thì người dùng cần điểm qua một số yếu tố sau:
+                            <li>Chọn nơi bán uy tín: </li>
+                            <p class="p1">. Đây là yếu tố giúp cho bạn chọn được một giỏ hoa giả chất lượng và không bị chênh lệch giá với thị trường. Bạn có thể tham khảo các đánh giá của khách hàng trên mạng xã hội và đến trực tiếp nơi bày bán sản phẩm để kiểm tra chất lượng trước khi mua nhé!
+                            </p>
+                            <img style="width: 300px; height: 350px;" src="../ASSETS/img/Giỏ hoa/giohoa3.jpg" alt="">
+
+                            <li>Màu sắc và mẫu mã:</li>
+                            <p class="p2">Bạn nên lưu ý nghiên cứu trước và lựa chọn những giỏ hoa giả phù hợp với sở thích của từng đối tượng người nhận. Điều này sẽ không chỉ thể hiện được sự quan tâm, chia sẻ mà còn giúp bạn ghi điểm trong các sự kiện quan trọng trong cuộc đời của người nhận.
+                            </p>
+                            <img style="width: 350px; height: 350px;" src="../ASSETS/img/Giỏ hoa/giohoa4.jpg" alt="">
+
+                            <li>Tặng đúng dịp: </li>
+                            <p class="p3">Tặng giỏ hoa giả đúng dịp cũng là hành động thể hiện sự quan tâm chu đáo. Ngoài lựa chọn một giỏ hoa giả phù hợp bạn cần cân nhắc sở thích của đối tượng được tặng để chọn được sản phẩm thích hợp. Nếu bạn không biết sở thích của họ, bạn nên chọn giỏ hoa giả với màu sắc và mẫu mã đơn giản để đảm bảo phù hợp với nhiều người.
+                            </p>
+                            <img style="width: 400px; height: 350px;" src="../ASSETS/img/Giỏ hoa/giohoa5.jpg" alt="">
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="section-4">
+                        <h3 class="fst-italic">CHIA SẺ NHỮNG THÔNG TIN NÀY TRÊN:</h3>
+                        <a href=""><i class="fa-brands fa-facebook text-dark"></i></a>
+                        <a href=""><i class="fa-brands fa-square-whatsapp text-dark"></i></a>
+                        <a href=""><i class="fa-brands fa-square-pinterest text-dark"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <h3 class="header-title">
+            SUNFLOWER <br> <span>Vận hành bởi:</span>
+        </h3>
+        <div class="footer__info">
+            <div class="footer__left">
+                <div class="footer__left-info">
+                    <div class="footer__group">
+                        <h4>ĐẠI HỌC CÔNG NGHIỆP TP HỒ CHÍ MINH <i class="fa-solid fa-building-columns"></i></h4>
+                        <p>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Số 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, TPHCM
+                        </p>
+                    </div>
+                    
+                    <div class="footer__group">
+                        <h4>THÀNH VIÊN <i class="fa-solid fa-user-group"></i></h4>
+                        <ul>
+                            <li> <i class="fa-brands fa-servicestack"></i> Ân Hiền Bảo Phúc</li>
+                            <li> <i class="fa-brands fa-servicestack"></i> Nguyễn Minh Sang</li>
+                            <li> <i class="fa-brands fa-servicestack"></i> Dương Thái Bảo</li>
+                            <li> <i class="fa-brands fa-servicestack"></i> Phạm Vũ Khang</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer__left-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.8582379832246!2d106.68426511149357!3d10.822158889284918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174deb3ef536f31%3A0x8b7bb8b7c956157b!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2hp4buHcCBUUC5IQ00!5e0!3m2!1svi!2s!4v1698337492660!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            
+            <div class="footer__right">
+                <div class="footer__group" style="padding-right: 80px;">
+                    <h4>HỖ TRỢ <i class="fa-regular fa-circle-question"></i></h4>
+                    <ul>
+                        <li>Hotline: 1900 52 24 85</li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-facebook footer-icon"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram footer-icon"></i></a>
+                            <a href=""><i class="fa-brands fa-linkedin-in footer-icon"></i></a>
+                            <a href=""><i class="fa-brands fa-google-plus-g footer-icon"></i></a>
+                            <a href=""><i class="fa-brands fa-github footer-icon"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__group">
+                    <h4>CHÍNH SÁCH <i class="fa-solid fa-building-shield"></i></h4>
+                    <ul>
+                        <li>
+                            <a href=""><i class="fa-brands fa-servicestack"></i> Chính sách vận chuyển</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-servicestack"></i> Chính sách bảo mật thông tin</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-servicestack"></i> Điều khoản sử dụng</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-servicestack"></i> Phương thức thanh toán</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-servicestack"></i> Chính sách bảo hành</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p>© 2023 Copyright <span>Nhóm 7 | Hệ thống và Công nghệ Web</span></p>
+        </div>
+    </footer>
+</body>
+
+</html>
