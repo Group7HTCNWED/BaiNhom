@@ -150,44 +150,67 @@ function searchProduct() {
 
 function showProductDetail(product) {
     let x = ``;
+    let y = ``;
+    let type = ``;
     var urlID = window.location.href;
     res1 = urlID.slice(-1);
     $.each(product, function (k, v) {
         if (v.id == res1) {
-            x += `<div class="row">
-            <div class="col-5"><img src="${v.pic}" alt="" class="imgcrop" width="100%">
-            </div>
-            <div class="col-7">
-                <div class="product-name">${v.name}</div>
-                <div class="rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
+            switch (v.type) {
+                case 1:
+                    type = "Hoa Khô"
+                    break;
+                case 2:
+                    type = "Hoa Giả"
+                    break;
+                case 3:
+                    type = "Bình Hoa"
+                    break;
+                case 4:
+                    type = "Giỏ Hoa"
+                    break;
+            }
+            x += `<img src="${v.pic}" alt="" style="width: 730px; height: 480px;"
+            class="img-rounded">`
+            y += `<nav aria-label="breadcrumb ">
+                    <ol class="breadcrumb ">
+                        <li class="breadcrumb-item "><a href="#" class="text-decoration-none link-dark">Trang
+                                chủ</a>
+                        </li>
+                        <li class="breadcrumb-item "><a href="#" class="text-decoration-none  link-dark">Sản phẩm</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">${type}</li>
+                    </ol>
+                </nav>
+                <h1 class="p-3">${v.name}</h1>
+                <div class="rate d-flex p-3">
+                    <span class="rate " style="color: rgb(226, 226, 7);">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span class="text-dark">11 đánh giá</span>
+                    </span>
                 </div>
-                <div class="price">
-                ${v.price}.000₫/100g
+                <div class="product-title p-3">
+                    <h3><b>Giá</b></h3>
+                    <h3>${v.price}.000₫/100g</h3>
                 </div>
-                <div class="add-to-cart">
-                    <div class="quantity">Số lượng: 1</div>
-                    <div class="row">
-                        <div class="col-6"><a href="">Thêm vào giỏ hàng</a></div>
-                        <div class="col-6"><a href="" class="add" data-name="${v.name}" data-price="${v.price}" data-pic="${v.pic}">Mua ngay</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <div class="description">
-            <div class="title">Thông tin sản phẩm</div>
-            <div class="product-content">
-                ${v.description}
-            </div>
-        </div>`;
+                <ul class="list-unstyled">
+                    <li><i class="fa-solid fa-truck p-3"></i> Chuyển phát nhanh</li>
+                    <li><i class="fa-solid fa-shield p-3"></i> Thanh toán an toàn</li>
+                    <li><i class="fa-solid fa-heart p-3"></i> Hỗ trợ các nhà sản xuất hàng loạt nhỏ</li>
+                    <li><i class="fa-solid fa-earth-americas p-3"></i> Có sẵn vận chuyển trên toàn thế giới</li>
+                    <li><i class="fa-solid fa-circle p-3" style="color: green;"></i> Còn hàng, sẵn sàng để giao</li>
+                </ul>
+                <p class=" p-3">Đã bao gồm thuế. </p>
+                <a href="" class="add" data-name="${v.name}" data-price="${v.price}" data-pic="${v.pic}"><button
+                        class="btn btn-dark w-100 p-4 fs-3">Thêm vào giỏ hàng</button></a>`
         }
     });
-    $("#detail").html(x);
+    $("#image-detail-product").html(x);
+    $("#detail-product").html(y);
 }
 showProductDetail(product);
 

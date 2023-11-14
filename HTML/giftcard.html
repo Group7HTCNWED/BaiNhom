@@ -7,12 +7,12 @@
     <title>SunFlower - Shop Hoa Trực Tuyến | Quà Tặng</title>
 
     <link rel="icon" type="image/x-icon" href="../ASSETS/img/SideBarIcon.png">
-    
+
     <link rel="stylesheet" href="../CSS/styleGift.css">
     <link rel="stylesheet" href="../ASSETS/fonts/fontawesome-free-6.4.0-web/css/all.min.css">
     <link rel="stylesheet" href="../CSS/bootstrap-grid.css">
     <link rel="stylesheet" href="../CSS/bootstrap.min.css">
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
@@ -28,7 +28,9 @@
     </header>
     <div class="header">
         <div class="vector-left">
-            <h3 class="header-title">SUNFLOWER</h3>
+            <a href="../HTML/home.html">
+                <h3 class="header-title">SUNFLOWER</h3>
+            </a>
         </div>
         <div class="vector-center">
             <ul class="nav">
@@ -62,13 +64,15 @@
             </ul>
         </div>
         <div class="vector-right">
-            
-            
+
+
             <div class="header-cart">
-                <a href="#">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <p class="number-cart">0</p>
-                </a>
+                <div class="checkout" style="width: 150px;">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#cart"><i
+                            class="fas fa-shopping-basket" id="icon_checkout"></i>(<span
+                            class="total-count"></span>)</a>
+                </div>
+
             </div>
             <div class="header-user">
                 <a href="#" id="loginBtn" onclick="openModal()">
@@ -77,22 +81,25 @@
                 <div class="modal" id="myModal">
                     <form name="form" class="box" method="post">
                         <h4>Đăng nhập</h4>
-                        
+
                         <div class="input-email">
                             <i class="fa-regular fa-envelope"></i>
-                            <input id="email" class="input-email-btn" type="email" name="email" placeholder="Email"/>
+                            <input id="email" class="input-email-btn" type="email" name="email" placeholder="Email" />
                         </div>
-                        
+
                         <div class="input-pass">
                             <i class="fa-solid fa-lock"></i>
-                            <input id="pass" class="input-pass-btn" type="password" name="password" placeholder="Mật khẩu"/>
+                            <input id="pass" class="input-pass-btn" type="password" name="password"
+                                placeholder="Mật khẩu" />
                         </div>
-                    
+
                         <a href="#" class="forgetpass">Quên mật khẩu?</a>
-                
+
                         <div class="btn-control">
-                            <input type="button" onclick="closeModal()" class="cancel" id="cancel" value="QUAY LẠI"></input>
-                            <input type="button" onclick="closeModal()" class="submit" id="submit" value="ĐĂNG NHẬP"></input>
+                            <input type="button" onclick="closeModal()" class="cancel" id="cancel"
+                                value="QUAY LẠI"></input>
+                            <input type="button" onclick="closeModal()" class="submit" id="submit"
+                                value="ĐĂNG NHẬP"></input>
                         </div>
 
                         <div class="login-or">
@@ -121,6 +128,30 @@
             </div>
         </div>
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Giỏ hàng</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="show-cart table">
+                    </table>
+                    <div>Tổng tiền: <span class="total-cart"></span> VND</div>
+                </div>
+                <div class="modal-footer">
+                    <button class="clear-cart btn btn-danger">Xóa giỏ hàng</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                    <a href="" class="btn btn-primary">Mua ngay</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="content">
         <hr>
@@ -128,7 +159,8 @@
             <h2>
                 E-GIFT VOUCHER
             </h2>
-            <p>Nếu bạn không biết nên mua gì cho người thân của mình, hãy tặng họ một phiếu quà tặng từ SunFlower. Phiếu quà
+            <p>Nếu bạn không biết nên mua gì cho người thân của mình, hãy tặng họ một phiếu quà tặng từ SunFlower. Phiếu
+                quà
                 tặng này sẽ được gửi trực tiếp đến hộp thư điện tử của họ, cho phép họ tự do lựa chọn món quà mình mong
                 muốn. Đây là cách tặng quà hoàn hảo cho tất cả mọi người.</p>
             <ol class="list-group">
@@ -155,9 +187,10 @@
             </div>
             <div class="col-lg-5">
                 <form action="giftVoucher" class="text-start p-2">
-                    <table >
+                    <table>
                         <tr>
-                            <td><label for="validationCustom01" class="form-label my-2">Mệnh giá voucher <span>*</span></label></td>
+                            <td><label for="validationCustom01" class="form-label my-2">Mệnh giá voucher
+                                    <span>*</span></label></td>
                         </tr>
                         <tr>
                             <td>
@@ -178,11 +211,12 @@
                         </tr>
                         <tr>
                             <td>
-                                <input type="text" name="name" class="form-control px-xl-5" id="nameInput" >
+                                <input type="text" name="name" class="form-control px-xl-5" id="nameInput">
                             </td>
                         </tr>
                         <tr>
-                            <td><label for="emailInput" class="form-label my-2">Email người nhận<span>*</span></label></td>
+                            <td><label for="emailInput" class="form-label my-2">Email người nhận<span>*</span></label>
+                            </td>
                         </tr>
                         <tr>
                             <td>
@@ -195,11 +229,12 @@
                         <tr>
                             <td>
                                 <div class="form-floating">
-                                    <textarea name="floatingTextarea2"  cols="20" rows="3" class="form-control" style="height: 200px;" id="floatingTextarea2"></textarea>
+                                    <textarea name="floatingTextarea2" cols="20" rows="3" class="form-control"
+                                        style="height: 200px;" id="floatingTextarea2"></textarea>
                                 </div>
                             </td>
-                        </tr>    
-                    </table>  
+                        </tr>
+                    </table>
                     <div class="btn-giftCard">
                         <input type="button" class="btn btn-primary" value="Lưu"></input>
                     </div>
@@ -222,7 +257,7 @@
                             Số 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, TPHCM
                         </p>
                     </div>
-                    
+
                     <div class="footer__group">
                         <h4>THÀNH VIÊN <i class="fa-solid fa-user-group"></i></h4>
                         <ul>
@@ -235,10 +270,13 @@
                 </div>
 
                 <div class="footer__left-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.8582379832246!2d106.68426511149357!3d10.822158889284918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174deb3ef536f31%3A0x8b7bb8b7c956157b!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2hp4buHcCBUUC5IQ00!5e0!3m2!1svi!2s!4v1698337492660!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.8582379832246!2d106.68426511149357!3d10.822158889284918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174deb3ef536f31%3A0x8b7bb8b7c956157b!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2hp4buHcCBUUC5IQ00!5e0!3m2!1svi!2s!4v1698337492660!5m2!1svi!2s"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
-            
+
             <div class="footer__right">
                 <div class="footer__group" style="padding-right: 80px;">
                     <h4>HỖ TRỢ <i class="fa-regular fa-circle-question"></i></h4>
@@ -281,7 +319,7 @@
             <p>© 2023 Copyright <span>Nhóm 7 | Hệ thống và Công nghệ Web</span></p>
         </div>
     </footer>
-
+    <script src="../JS/product.js"></script>
 </body>
 
 </html>

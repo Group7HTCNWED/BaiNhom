@@ -3415,7 +3415,9 @@ textarea.form-control-lg {
 .fade:not(.in) {
   opacity: 0;
 }
-
+.fade:not(.show) {
+  opacity: 0;
+}
 .collapse:not(.show) {
   display: none;
 }

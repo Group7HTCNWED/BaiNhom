@@ -7,12 +7,12 @@
     <title>SunFlower - Shop Hoa Trực Tuyến | Hướng Dẫn Chăm Sóc</title>
 
     <link rel="icon" type="image/x-icon" href="../ASSETS/img/SideBarIcon.png">
-    
+
     <link rel="stylesheet" href="../CSS/takeCareFlower.css">
     <link rel="stylesheet" href="../ASSETS/fonts/fontawesome-free-6.4.0-web/css/all.min.css">
     <link rel="stylesheet" href="../CSS/bootstrap-grid.css">
     <link rel="stylesheet" href="../CSS/bootstrap.min.css">
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
@@ -28,7 +28,9 @@
     </header>
     <div class="header">
         <div class="vector-left">
-            <h3 class="header-title">SUNFLOWER</h3>
+            <a href="../HTML/home.html">
+                <h3 class="header-title">SUNFLOWER</h3>
+            </a>
         </div>
         <div class="vector-center">
             <ul class="nav">
@@ -62,13 +64,15 @@
             </ul>
         </div>
         <div class="vector-right">
-            
-            
+
+
             <div class="header-cart">
-                <a href="#">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <p class="number-cart">0</p>
-                </a>
+                <div class="checkout" style="width: 150px;">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#cart"><i
+                            class="fas fa-shopping-basket" id="icon_checkout"></i>(<span
+                            class="total-count"></span>)</a>
+                </div>
+
             </div>
             <div class="header-user">
                 <a href="#" id="loginBtn" onclick="openModal()">
@@ -77,22 +81,25 @@
                 <div class="modal" id="myModal">
                     <form name="form" class="box" method="post">
                         <h4>Đăng nhập</h4>
-                        
+
                         <div class="input-email">
                             <i class="fa-regular fa-envelope"></i>
-                            <input id="email" class="input-email-btn" type="email" name="email" placeholder="Email"/>
+                            <input id="email" class="input-email-btn" type="email" name="email" placeholder="Email" />
                         </div>
-                        
+
                         <div class="input-pass">
                             <i class="fa-solid fa-lock"></i>
-                            <input id="pass" class="input-pass-btn" type="password" name="password" placeholder="Mật khẩu"/>
+                            <input id="pass" class="input-pass-btn" type="password" name="password"
+                                placeholder="Mật khẩu" />
                         </div>
-                    
+
                         <a href="#" class="forgetpass">Quên mật khẩu?</a>
-                
+
                         <div class="btn-control">
-                            <input type="button" onclick="closeModal()" class="cancel" id="cancel" value="QUAY LẠI"></input>
-                            <input type="button" onclick="closeModal()" class="submit" id="submit" value="ĐĂNG NHẬP"></input>
+                            <input type="button" onclick="closeModal()" class="cancel" id="cancel"
+                                value="QUAY LẠI"></input>
+                            <input type="button" onclick="closeModal()" class="submit" id="submit"
+                                value="ĐĂNG NHẬP"></input>
                         </div>
 
                         <div class="login-or">
@@ -121,7 +128,30 @@
             </div>
         </div>
     </div>
-
+    <!-- Modal -->
+    <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Giỏ hàng</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="show-cart table">
+                    </table>
+                    <div>Tổng tiền: <span class="total-cart"></span> VND</div>
+                </div>
+                <div class="modal-footer">
+                    <button class="clear-cart btn btn-danger">Xóa giỏ hàng</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                    <a href="" class="btn btn-primary">Mua ngay</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <hr>
     <div class="slider">
     </div>
@@ -140,13 +170,14 @@
                 Tuy nhiên, để bảo tồn sự tươi đẹp và sức sống của những bông hoa này, việc chăm sóc đúng cách là vô
                 cùng
                 quan trọng. Tại đây, chúng tôi là những người đam mê hoa và chúng tôi muốn giúp bạn hiểu rõ
-                mọi khía cạnh về cách chăm sóc hộp hoa của bạn.</p>
+                mọi khía cạnh về cách chăm sóc hộp hoa của bạn.
+            </p>
         </div>
-      
+
         <div class="section-2">
             <h3>Nói về những chậu hoa:</h3>
             <img src="../ASSETS/img/Hoa khô/takecareFlower-1.jpg" alt="">
-            
+
             <p>Hãy cùng nhau bước vào một thế giới đầy màu sắc và tinh tế - thế giới của những chậu hoa đầy sức
                 sống. Đây không chỉ đơn giản là một món quà, mà là một tác phẩm nghệ thuật đích thực, hoàn hảo để kỷ
                 niệm những sự kiện quan trọng trong cuộc đời hoặc để biến ngày thường trở nên đặc biệt hơn bao giờ
@@ -164,9 +195,10 @@
                 <br>
                 Nhưng hơn cả, những chậu hoa là một cách để bạn truyền đạt tình cảm và tạo ấn tượng mạnh mẽ. Với mỗi
                 chậu hoa, bạn đang gửi đi một thông điệp về sự quan tâm và yêu thương. Chính vì vậy, hãy để những
-                chậu hoa đánh thức những cảm xúc đẹp đẽ và tạo nên những kỷ niệm đáng nhớ.</p>
+                chậu hoa đánh thức những cảm xúc đẹp đẽ và tạo nên những kỷ niệm đáng nhớ.
+            </p>
         </div>
-        
+
         <div class="section-3">
             <h3>Lời khuyên cho việc chăm sóc chậu hoa:</h3>
             <ul>
@@ -221,7 +253,8 @@
         </div>
         <hr>
         <div class="section-4">
-            <h3 class="fst-italic" style="font-size: 1.75rem; margin: 0; margin-bottom: 5px; font-style: italic;">CHIA SẺ NHỮNG THÔNG TIN NÀY TRÊN:</h3>
+            <h3 class="fst-italic" style="font-size: 1.75rem; margin: 0; margin-bottom: 5px; font-style: italic;">CHIA
+                SẺ NHỮNG THÔNG TIN NÀY TRÊN:</h3>
             <a href=""><i class="fa-brands fa-facebook"></i></a>
             <a href=""><i class="fa-brands fa-square-whatsapp"></i></a>
             <a href=""><i class="fa-brands fa-square-pinterest"></i></a>
@@ -243,7 +276,7 @@
                             Số 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, TPHCM
                         </p>
                     </div>
-                    
+
                     <div class="footer__group">
                         <h4>THÀNH VIÊN <i class="fa-solid fa-user-group"></i></h4>
                         <ul>
@@ -256,10 +289,13 @@
                 </div>
 
                 <div class="footer__left-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.8582379832246!2d106.68426511149357!3d10.822158889284918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174deb3ef536f31%3A0x8b7bb8b7c956157b!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2hp4buHcCBUUC5IQ00!5e0!3m2!1svi!2s!4v1698337492660!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.8582379832246!2d106.68426511149357!3d10.822158889284918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174deb3ef536f31%3A0x8b7bb8b7c956157b!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2hp4buHcCBUUC5IQ00!5e0!3m2!1svi!2s!4v1698337492660!5m2!1svi!2s"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
-            
+
             <div class="footer__right">
                 <div class="footer__group" style="padding-right: 80px;">
                     <h4>HỖ TRỢ <i class="fa-regular fa-circle-question"></i></h4>

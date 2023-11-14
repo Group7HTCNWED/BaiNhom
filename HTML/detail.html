@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SunFlower - Shop Hoa Trực Tuyến</title>
+    <title>SunFlower - Shop Hoa Trực Tuyến </title>
 
     <link rel="icon" type="image/x-icon" href="../ASSETS/img/SideBarIcon.png">
-
-    <link rel="stylesheet" href="../CSS/styleDried.css">
     <link rel="stylesheet" href="../ASSETS/fonts/fontawesome-free-6.4.0-web/css/all.min.css">
     <link rel="stylesheet" href="../CSS/bootstrap-grid.css">
     <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/bootstrap.css">
+    <link rel="stylesheet" href="../CSS/detail.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <link rel="stylesheet" href="../ASSETS/bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <script src="../JS/bootstrap.min.js"></script>
+
     <script src="../JS/script.js"></script>
 </head>
 
@@ -28,7 +28,7 @@
     </header>
     <div class="header">
         <div class="vector-left">
-            <h3 class="header-title">SUNFLOWER</h3>
+            <a href="../HTML/home.html"> <a href="../HTML/home.html"><h3 class="header-title">SUNFLOWER</h3></a></a>
         </div>
         <div class="vector-center">
             <ul class="nav">
@@ -45,15 +45,15 @@
                     </select>
                 </li>
                 <li><a class="strong text-decoration-none" href="home.html">Trang chủ</a></li>
-                <li><a href="#" class="text-decoration-none">Phân loại
+                <li><a href="#" class="text-decoration-none">Sản phẩm
                         <i class="fa-solid fa-angle-down text-sm"></i>
                     </a>
                     <ul class="subnav">
-                        <li><a href="Driedflower.html">Hoa khô</a></li>
-                        <li><a href="Falseflower.html">Hoa giả</a></li>
-                        <li><a href="Flowerpot.html">Chậu hoa</a></li>
-                        <li><a href="Vases.html">Bình hoa</a></li>
-                        <li><a href="Flowerbasket.html">Giỏ hoa</a></li>
+                        <li><a href="product.html?h1">Hoa khô</a></li>
+                        <li><a href="product.html?h2">Hoa giả</a></li>
+                        <li><a href="product.html?h3">Chậu hoa</a></li>
+                        <li><a href="product.html?h4">Bình hoa</a></li>
+                        <li><a href="product.html?h5">Giỏ hoa</a></li>
                     </ul>
                 </li>
                 <li><a class="strong text-decoration-none" href="sale.html">Ưu đãi</a></li>
@@ -62,20 +62,12 @@
             </ul>
         </div>
         <div class="vector-right">
-            <div class="header-search">
-                <input type="text" placeholder="Tìm kiếm ở đây" class="header-search-input">
-                <div class="header-search-icon">
-                    <a href="#">
-                        <i class="fa-solid fa-magnifying-glass text-dark"></i>
-                    </a>
-                </div>
-            </div>
-
             <div class="header-cart">
-                <a href="#">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <p class="number-cart">0</p>
-                </a>
+                <div class="checkout" style="width: 150px;">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#cart"><i
+                            class="fas fa-shopping-basket" id="icon_checkout"></i>(<span
+                            class="total-count"></span>)</a>
+                </div>
             </div>
             <div class="header-user">
                 <a href="#" id="loginBtn" onclick="openModal()">
@@ -131,19 +123,41 @@
             </div>
         </div>
     </div>
-
-    <div class="container-fluid  mb-5" >
-        <div class="row justify-content-evenly">
-            <div class="col-md-5 p-5" style="border: 1px solid #ccc;">
-                <img src="../ASSETS/img/Driedflower/h1.jpg" alt="" style="width: 730px; height: 480px;"
-                    class="img-rounded">
+    <!-- Modal -->
+    <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Giỏ hàng</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="show-cart table">
+                    </table>
+                    <div>Tổng tiền: <span class="total-cart"></span> VND</div>
+                </div>
+                <div class="modal-footer">
+                    <button class="clear-cart btn btn-danger">Xóa giỏ hàng</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                    <a href="" class="btn btn-primary">Mua ngay</a>
+                </div>
             </div>
-            <div class="col-md-3">
+        </div>
+    </div>
+    <div class="container-fluid  mb-5">
+        <div class="row justify-content-evenly">
+            <div class="col-md-5 p-5" style="border: 1px solid #ccc;" id="image-detail-product">
+            </div>
+            <div class="col-md-3" id="detail-product">
                 <nav aria-label="breadcrumb ">
                     <ol class="breadcrumb ">
-                        <li class="breadcrumb-item "><a href="#" class="text-decoration-none link-dark">Trang chủ</a>
+                        <li class="breadcrumb-item "><a href="#" class="text-decoration-none link-dark">Trang
+                                chủ</a>
                         </li>
-                        <li class="breadcrumb-item "><a href="#" class="text-decoration-none  link-dark">Phân loại</a>
+                        <li class="breadcrumb-item "><a href="#" class="text-decoration-none  link-dark">Sản phẩm</a>
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">Hoa khô</li>
                     </ol>
@@ -171,7 +185,8 @@
                     <li><i class="fa-solid fa-circle p-3" style="color: green;"></i> Còn hàng, sẵn sàng để giao</li>
                 </ul>
                 <p class=" p-3">Đã bao gồm thuế. </p>
-                <button class="btn btn-dark w-100 p-4 fs-3">Thêm vào giỏ hàng</button>
+                <a href="" class="add" data-name="${v.name}" data-price="${v.price}" data-pic="${v.pic}"><button
+                        class="btn btn-dark w-100 p-4 fs-3">Thêm vào giỏ hàng</button></a>
             </div>
         </div>
     </div>
@@ -299,9 +314,10 @@
                         <!-- <span>(10)</span> -->
                     </div>
                     <p class="review-text">
-                        Việc cắm hoa thật đẹp. Tôi nhận được một cuộc gọi để tìm hiểu xem liệu tôi có sẵn sàng thay đổi
+                        Việc cắm hoa thật đẹp. Tôi nhận được một cuộc gọi để tìm hiểu xem liệu tôi có sẵn sàng thay
+                        đổi
                         đơn đặt hàng hoa của mình hay không vì việc giao hoa màu đỏ bị chậm trễ...
-    
+
                     </p>
                 </div>
             </div>
@@ -317,14 +333,14 @@
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
-    
+
                         </span>
                         <!-- <span>(10)</span> -->
                     </div>
                     <p class="review-text">
                         <b>Có hiệu quả</b> <br>
                         Dịch vụ này thật tuyệt vời và hoa được giao đúng hẹn.
-    
+
                     </p>
                 </div>
             </div>
@@ -344,16 +360,17 @@
                         <!-- <span>(10)</span> -->
                     </div>
                     <p class="review-text">
-                        Những bông hoa được giao trong tình trạng nguyên vẹn mặc dù người giao hàng bị lạc một chút nhưng mọi thứ còn lại đều tuyệt vời!!! Cảm ơn các bạn
-    
+                        Những bông hoa được giao trong tình trạng nguyên vẹn mặc dù người giao hàng bị lạc một chút
+                        nhưng mọi thứ còn lại đều tuyệt vời!!! Cảm ơn các bạn
+
                     </p>
                 </div>
-    
+
             </div>
-            <div class="pagination-sale" >
+            <div class="pagination-sale">
                 <nav aria-label="Page navigation example ">
                     <ul class="pagination justify-content-center ">
-                        <li class="page-item"><a class="page-link text-dark fs-4"  href="#">Previous</a></li>
+                        <li class="page-item"><a class="page-link text-dark fs-4" href="#">Previous</a></li>
                         <li class="page-item"><a class="page-link text-dark fs-4" href="#">1</a></li>
                         <li class="page-item"><a class="page-link text-dark fs-4" href="#">2</a></li>
                         <li class="page-item"><a class="page-link text-dark fs-4" href="#">3</a></li>
@@ -363,7 +380,7 @@
             </div>
         </div>
     </div>
-    
+
     <footer style="margin-top: 100px;">
         <h3 class="header-title">
             SUNFLOWER <br> <span>Vận hành bởi:</span>
@@ -440,6 +457,6 @@
             <p>© 2023 Copyright <span>Nhóm 7 | Hệ thống và Công nghệ Web</span></p>
         </div>
     </footer>
-
+    <script src="../JS/product.js"></script>
 
 </body>
