@@ -143,21 +143,32 @@ $('.clearOrder').click(function () {
 function displayCart() {
     var cartArray = shoppingCart.listCart();
     var output = "Giỏ hàng trống";
+    var checkout = "";
     for (var i in cartArray) {
         output += "<tr>"
             // + "<td>" + "<img style='width: 1.75rem; height: 2.5rem; display:block; margin: auto' src=img" + cartArray[i].img + ".jpg alt='thumbnail'></td>"
             + "<td><b>" + cartArray[i].name + "</b></td>"
-            + "<td><b>"+ cartArray[i].price  + " VND" + "</b></td>"
+            + "<td><b>" + cartArray[i].price + " VND" + "</b></td>"
             + "<td><div class='input-group'>"
             + "<input type='number' min='1' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
             + "</div></td>"
             + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + "><i class='fa fa-trash' aria-hidden='true'></i></button></td>"
             + " = "
-            + "<td><b>"+ cartArray[i].total  + " VND" + "</b></td>"
+            + "<td><b>" + cartArray[i].total + " VND" + "</b></td>"
             + "</tr>";
+
+        checkout += `<li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                    <h6 class="my-0 show-cart-checkout"><b> ${cartArray[i].name}</b> Giá:  ${cartArray[i].price}.000VND<br>Số lượng: ${cartArray[i].count} </h6>
+                    <small class="text-muted">Thành tiền: ${cartArray[i].total}VND</small>
+                </div>
+                <span class="text-muted"></span>
+            </li>`;
     }
+
+    $('.show-cart-checkout').html(checkout);
     $('.show-cart').html(output);
-    $('.total-cart').html(shoppingCart.totalCart());
+    $('.total-cart').html(shoppingCart.totalCart() + ".000 VND");
     $('.total-count').html(shoppingCart.totalCount());
     //adding shopping cart only display badge number when have at least one item
     if (shoppingCart.totalCount() == 0) {
