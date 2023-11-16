@@ -148,7 +148,7 @@
                                 <div class="md-form mb-5">
                                     <label class="contentPay">Họ và tên</label>
                                     <input type="text" id="fname" name="firstname" class="form-control"
-                                        placeholder="Ex: Thinh Tran" required>
+                                        placeholder="" required>
                                 </div>
                                 <div class="row">
                                     <!--Grid column-->
@@ -158,7 +158,7 @@
                                         <div class="md-form ">
 
                                             <label for="firstName" class="contentPay">Email</label>
-                                            <input type="text" id="firstName" class="form-control">
+                                            <input type="text" id="firstName" class="form-control" required>
                                         </div>
 
                                     </div>
@@ -171,7 +171,7 @@
                                         <div class="md-form">
 
                                             <label class="contentPay">Số điện thoại</label>
-                                            <input type="text" id="lastName" class="form-control">
+                                            <input type="text" id="lastName" class="form-control" required>
                                         </div>
 
                                     </div>
@@ -186,7 +186,8 @@
                                 <!--address-->
                                 <div class="md-form mb-5">
                                     <label for="address" class="contentPay">Địa chỉ</label>.
-                                    <input type="text" id="address" class="form-control" placeholder="1234 Main St">
+                                    <input type="text" id="address" class="form-control" placeholder="1234 Main St"
+                                        required>
                                 </div>
 
 
@@ -194,9 +195,10 @@
 
 
                                 <hr class="mb-4">
-                                <button class="btn btn-primary btn-lg btn-block clearOrder" type="submit"  id="send">Xác nhận đơn
+                                <button class="btn btn-primary btn-lg btn-block clearOrder" type="submit" id="send">Xác
+                                    nhận đơn
                                     hàng</button>
-
+                            </div>
                         </form>
 
                     </div>
@@ -330,7 +332,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         $(document).ready(function () {
-            $("#send").click(function (e) {
+            $("#send").submit(function (e) {
                 e.preventDefault();
                 Swal.fire({
                     title: "Đơn hàng đã được đặt thành công",
