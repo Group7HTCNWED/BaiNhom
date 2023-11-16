@@ -10,14 +10,13 @@
     <link rel="stylesheet" href="../ASSETS/fonts/fontawesome-free-6.4.0-web/css/all.min.css">
     <link rel="stylesheet" href="../CSS/bootstrap-grid.css">
     <link rel="stylesheet" href="../CSS/bootstrap.min.css">
-    <link rel="stylesheet" href="../CSS/bootstrap.css">
-    <link rel="stylesheet" href="../CSS/detail.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="../JS/bootstrap.min.js"></script>
 
     <script src="../JS/script.js"></script>
+    <link rel="stylesheet" href="../CSS/detail.css">
 </head>
 
 <body>
@@ -28,7 +27,9 @@
     </header>
     <div class="header">
         <div class="vector-left">
-            <a href="../HTML/home.html"> <a href="../HTML/home.html"><h3 class="header-title">SUNFLOWER</h3></a></a>
+            <a href="../HTML/home.html"> <a href="../HTML/home.html">
+                    <h3 class="header-title">SUNFLOWER</h3>
+                </a></a>
         </div>
         <div class="vector-center">
             <ul class="nav">
@@ -142,68 +143,34 @@
                 <div class="modal-footer">
                     <button class="clear-cart btn btn-danger">Xóa giỏ hàng</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-                    <a href="" class="btn btn-primary">Mua ngay</a>
+                    <a href="../HTML/checkout.html" class="btn btn-primary">Mua ngay</a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container-fluid  mb-5">
+    <div class="container-fluid  mb-5" style="margin-top: 50px;">
         <div class="row justify-content-evenly">
-            <div class="col-md-5 p-5" style="border: 1px solid #ccc;" id="image-detail-product">
+            <div class="col-md-6 p-5" id="image-detail-product" style="margin-left: 100px;">
             </div>
-            <div class="col-md-3" id="detail-product">
-                <nav aria-label="breadcrumb ">
-                    <ol class="breadcrumb ">
-                        <li class="breadcrumb-item "><a href="#" class="text-decoration-none link-dark">Trang
-                                chủ</a>
-                        </li>
-                        <li class="breadcrumb-item "><a href="#" class="text-decoration-none  link-dark">Sản phẩm</a>
-                        </li>
-                        <li class="breadcrumb-item active" aria-current="page">Hoa khô</li>
-                    </ol>
-                </nav>
-                <h1 class="p-3">Hoa Lavender khô</h1>
-                <div class="rate d-flex p-3">
-                    <span class="rate " style="color: rgb(226, 226, 7);">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <span class="text-dark">11 đánh giá</span>
-                    </span>
-                </div>
-                <div class="product-title p-3">
-                    <h3><b>Giá</b></h3>
-                    <h3>980,000₫</h3>
-                </div>
-                <ul class="list-unstyled">
-                    <li><i class="fa-solid fa-truck p-3"></i> Chuyển phát nhanh</li>
-                    <li><i class="fa-solid fa-shield p-3"></i> Thanh toán an toàn</li>
-                    <li><i class="fa-solid fa-heart p-3"></i> Hỗ trợ các nhà sản xuất hàng loạt nhỏ</li>
-                    <li><i class="fa-solid fa-earth-americas p-3"></i> Có sẵn vận chuyển trên toàn thế giới</li>
-                    <li><i class="fa-solid fa-circle p-3" style="color: green;"></i> Còn hàng, sẵn sàng để giao</li>
-                </ul>
-                <p class=" p-3">Đã bao gồm thuế. </p>
-                <a href="" class="add" data-name="${v.name}" data-price="${v.price}" data-pic="${v.pic}"><button
-                        class="btn btn-dark w-100 p-4 fs-3">Thêm vào giỏ hàng</button></a>
+            <div class="col-md-3" id="detail-product" style="margin-left: 55px;">
+
             </div>
         </div>
     </div>
-    <div class="container section-comment my-5 ">
-        <h1 style="margin-left: 55px; font-weight: 700;"> Phản hồi khách hàng</h1>
+    <div class="container-fluid  mb-5" id="comment">
+        <h1 style=" font-weight: 700;"> Phản hồi khách hàng</h1>
         <div class="row justify-content-lg-end ">
-            <div class="rate col-auto p-3">
+            <div class="rate d-flex p-3 col-12">
                 <span class="rate " style="color: rgb(226, 226, 7);">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
-                    <h4 class="text-dark">Dựa trên 11 đánh giá</h4>
+                    <span class="text-dark">11 đánh giá</span>
                 </span>
             </div>
-            <div class="col-md-7">
+            <div class="col-md-12">
                 <div class="five-star">
                     <span class="rate" style="color: rgb(226, 226, 7);">
                         <i class="fa-solid fa-star"></i>
@@ -292,10 +259,6 @@
                     <!-- <span>(10)</span> -->
                 </div>
             </div>
-
-            <div class="col-md-3">
-                <button class="btn btn-outline-dark p-2 fs-3">Đặt câu hỏi</button>
-            </div>
         </div>
         <div class="row justify-content-between my-4">
             <div class="col-md-3 card">
@@ -367,17 +330,7 @@
                 </div>
 
             </div>
-            <div class="pagination-sale">
-                <nav aria-label="Page navigation example ">
-                    <ul class="pagination justify-content-center ">
-                        <li class="page-item"><a class="page-link text-dark fs-4" href="#">Previous</a></li>
-                        <li class="page-item"><a class="page-link text-dark fs-4" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link text-dark fs-4" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link text-dark fs-4" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link text-dark fs-4" href="#">Next</a></li>
-                    </ul>
-                </nav>
-            </div>
+
         </div>
     </div>
 
@@ -457,6 +410,8 @@
             <p>© 2023 Copyright <span>Nhóm 7 | Hệ thống và Công nghệ Web</span></p>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../JS/product.js"></script>
-
+    <script src="../JS/shopingcart.js"></script>
+    <script src="../JS/shopingcart.js"></script>
 </body>
