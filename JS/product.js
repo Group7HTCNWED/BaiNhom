@@ -425,8 +425,8 @@ function showProductHome(product) {
                               <img src="${v.pic}" alt="Hoa" class="img-thumbnail">
                               <div class="card-body">
                                   <h3>${v.name}</h3>
-                                  <p><del style="padding-right: 16px; color: #555555">${priceD}
-                                  <sup>đ</sup></del> <ins>${v.price}</ins> <sup>đ</sup></p>
+                                  <p><del style="padding-right: 16px; color: #555555">${priceD}.000
+                                  <sup>đ</sup></del> <ins>${v.price}.000</ins> <sup>đ</sup></p>
                                   <input type="button" class="btn btn-outline-danger" value="Xem thông tin"></input>
                               </div>
                           </div>
